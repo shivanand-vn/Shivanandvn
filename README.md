@@ -20,33 +20,6 @@ This portfolio is built with a focus on high-quality aesthetics, responsiveness,
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/) (Fi / Si)
 - **Deployment**: Configured for rapid static deployment.
 
-## 🚀 Getting Started
-
-If you'd like to run this portfolio locally or use it as a base:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/shivanand-vn/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies:**
-   Make sure you have [Node.js](https://nodejs.org/) installed, then run:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` (or the port provided in the terminal) in your browser.
-
-4. **Build for production:**
-   To compile the minified, optimized production bundle:
-   ```bash
-   npm run build
-   ```
 
 ## 📬 Contact
 
