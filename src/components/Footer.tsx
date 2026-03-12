@@ -21,7 +21,9 @@ export default function Footer() {
             email={portfolio.email}
             size="sm"
           />
-          <p className="text-xs font-medium text-zinc-500 dark:text-zinc-500">© {year}</p>
+          <p className="text-xs font-medium text-zinc-500 dark:text-zinc-500">
+            © {year} All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
