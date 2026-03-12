@@ -1,10 +1,11 @@
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi'
 import type { ReactNode } from 'react'
 
 type Props = {
   github: string
   linkedin: string
   email: string
+  phone?: string
   size?: 'sm' | 'md'
 }
 
@@ -37,7 +38,7 @@ function IconLink({
   )
 }
 
-export default function SocialLinks({ github, linkedin, email, size = 'md' }: Props) {
+export default function SocialLinks({ github, linkedin, email, phone, size = 'md' }: Props) {
   return (
     <div className="flex items-center gap-3">
       <IconLink href={github} label="GitHub" size={size}>
@@ -49,6 +50,11 @@ export default function SocialLinks({ github, linkedin, email, size = 'md' }: Pr
       <IconLink href={`mailto:${email}`} label="Email" size={size}>
         <FiMail />
       </IconLink>
+      {phone && (
+        <IconLink href={`tel:${phone}`} label="Phone" size={size}>
+          <FiPhone />
+        </IconLink>
+      )}
     </div>
   )
 }

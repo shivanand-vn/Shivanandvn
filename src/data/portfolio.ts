@@ -9,8 +9,7 @@ export const portfolio = {
   },
   about: [
     'MCA student with hands-on experience in Python, full stack web development, and desktop application development.',
-    'Skilled in building real-world applications using Tkinter, MySQL, React, Node.js, and modern web technologies.',
-    'Seeking an entry-level software development role to apply technical skills and grow professionally.',
+    'Skilled in building real-world applications using Tkinter, MySQL, React, Node.js, Express, MongoDB, and modern web technologies. Seeking a software development role to apply technical skills and grow professionally.',
   ],
   skills: {
     languages: ['Python', 'C', 'JavaScript'],
@@ -109,6 +108,28 @@ export const portfolio = {
         'Academic resource sharing',
         'Clean and intuitive UI',
         'Best Performer – UI MasterLine 2025',
+      ],
+    },
+    {
+      title: 'Vehicle Dent Detection using Deep Learning',
+      images: [
+        { src: '/project-previews/Vehicle dent-1.png', alt: 'Vehicle dent-1' },
+        { src: '/project-previews/Vehicle dent-2.png', alt: 'Vehicle dent-2' },
+        { src: '/project-previews/Vehicle dent-3.png', alt: 'Vehicle dent-3' },
+        { src: '/project-previews/Vehicle dent-4.png', alt: 'Vehicle dent-4' },
+        { src: '/project-previews/Vehicle dent-5.png', alt: 'Vehicle dent-5' },
+      ],
+      tech: ['AI / ML', 'Computer Vision', 'TensorFlow', 'Keras', 'OpenCV'],
+      description:
+        'AI-powered computer vision system that detects vehicle surface dents from images using Deep Learning, demonstrating automated damage inspection for automotive and insurance workflows.',
+      links: {
+        github: 'https://github.com/shivanand-vn/Vehicle-Dent-Detection',
+      },
+      highlights: [
+        'Automated vehicle dent detection from images using CNN',
+        'Implemented Transfer Learning with MobileNetV2 for efficient model training',
+        'Built using Python, TensorFlow / Keras, and OpenCV',
+        'Applied image preprocessing and data augmentation to improve model accuracy',
       ],
     },
   ],

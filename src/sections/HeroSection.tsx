@@ -102,12 +102,8 @@ export default function HeroSection() {
                 github={portfolio.links.github}
                 linkedin={portfolio.links.linkedin}
                 email={portfolio.email}
+                phone={portfolio.phone}
               />
-              <div className="hidden text-xs text-zinc-500 dark:text-zinc-400 sm:block">
-                <span className="font-medium text-zinc-700 dark:text-zinc-200">{portfolio.phone}</span>
-                <span className="mx-2">•</span>
-                <span>{portfolio.email}</span>
-              </div>
             </motion.div>
           </div>
 

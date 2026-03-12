@@ -19,6 +19,7 @@ export default function Footer() {
             github={portfolio.links.github}
             linkedin={portfolio.links.linkedin}
             email={portfolio.email}
+            phone={portfolio.phone}
             size="sm"
           />
           <p className="text-xs font-medium text-zinc-500 dark:text-zinc-500">
