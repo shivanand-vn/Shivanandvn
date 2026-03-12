@@ -10,10 +10,10 @@ export default function Background() {
   }, [])
 
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-zinc-50 dark:bg-zinc-950">
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-slate-50 dark:bg-zinc-950">
       
       {/* 1. Base Gradient Wash */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(14,165,233,0.06)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(52,211,153,0.05)_0%,transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(14,165,233,0.15)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(52,211,153,0.05)_0%,transparent_60%)]" />
 
       {/* 2. Animated Floating Orbs */}
       {mounted && (
@@ -29,7 +29,7 @@ export default function Background() {
               y: [0, 20, 0]
             }}
             transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-teal-300/40 blur-[100px] dark:bg-emerald-500/25"
+            className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-emerald-300/60 blur-[120px] dark:bg-emerald-500/25"
           />
 
           {/* Bottom Right - Indigo/Purple Orbit */}
@@ -42,7 +42,7 @@ export default function Background() {
               y: [0, -40, 0]
             }}
             transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-            className="absolute -bottom-[10%] -right-[10%] h-[600px] w-[600px] rounded-full bg-indigo-300/40 blur-[120px] dark:bg-indigo-600/20"
+            className="absolute -bottom-[10%] -right-[10%] h-[600px] w-[600px] rounded-full bg-indigo-300/60 blur-[130px] dark:bg-indigo-600/20"
           />
 
           {/* Center - Deep Cyan Pulse */}
@@ -55,13 +55,13 @@ export default function Background() {
               y: [0, -20, 20, 0]
             }}
             transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
-            className="absolute left-[30%] top-[40%] h-[400px] w-[400px] rounded-full bg-sky-300/30 blur-[100px] dark:bg-cyan-500/10"
+            className="absolute left-[30%] top-[40%] h-[400px] w-[400px] rounded-full bg-sky-400/40 blur-[120px] dark:bg-cyan-500/10"
           />
         </div>
       )}
 
       {/* 3. High-Tech Architectural Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_10%,transparent_90%)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] dark:[mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_90%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000015_1px,transparent_1px),linear-gradient(to_bottom,#00000015_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_10%,transparent_90%)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] dark:[mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_90%)]" />
 
       {/* 4. Film Grain / Subtle Noise Texture */}
       <div className="absolute inset-0 opacity-[0.025] mix-blend-multiply dark:mix-blend-overlay dark:opacity-[0.05] [background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22240%22 height=%22240%22 filter=%22url(%23n)%22 opacity=%220.25%22/%3E%3C/svg%3E')] [background-size:240px_240px]" />
