@@ -7,6 +7,8 @@ type Props = {
   variant?: 'primary' | 'secondary' | 'ghost'
   className?: string
   ariaLabel?: string
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 const variants: Record<NonNullable<Props['variant']>, string> = {
@@ -28,6 +30,8 @@ export default function Button({
   variant = 'primary',
   className = '',
   ariaLabel,
+  type = 'button',
+  disabled = false,
 }: Props) {
   const cls = `${base} ${variants[variant]} ${className}`.trim()
 
@@ -46,7 +50,13 @@ export default function Button({
   }
 
   return (
-    <button className={cls} type="button" onClick={onClick} aria-label={ariaLabel}>
+    <button
+      className={cls}
+      type={type}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      disabled={disabled}
+    >
       {children}
     </button>
   )
