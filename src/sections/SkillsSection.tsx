@@ -13,9 +13,9 @@ import {
   SiPostman,
   SiPython,
   SiReact,
-  SiVscodium,
   SiExpress,
 } from 'react-icons/si'
+import { VscVscode } from 'react-icons/vsc'
 import Card from '../components/Card'
 import SectionHeading from '../components/SectionHeading'
 import { portfolio } from '../data/portfolio'
@@ -32,7 +32,7 @@ const skillIcons: Record<string, { icon: IconType; color: string }> = {
   MySQL: { icon: SiMysql, color: '#4479A1' },
   MongoDB: { icon: SiMongodb, color: '#47A248' },
   GitHub: { icon: SiGithub, color: '' }, // Keep monochrome
-  'VS Code': { icon: SiVscodium, color: '#2F80ED' },
+  'VS Code': { icon: VscVscode, color: '#007ACC' },
   Postman: { icon: SiPostman, color: '#FF6C37' },
   'MySQL Workbench': { icon: SiMysql, color: '#4479A1' },
   'MongoDB Compass': { icon: SiMongodb, color: '#47A248' },
