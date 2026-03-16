@@ -10,7 +10,6 @@ import ExperienceSection from '../sections/ExperienceSection'
 import HeroSection from '../sections/HeroSection'
 import ProjectsSection from '../sections/ProjectsSection'
 import SkillsSection from '../sections/SkillsSection'
-import ReviewSection from '../sections/ReviewSection'
 
 const navItems: NavItem[] = [
   { id: 'about', label: 'About' },
@@ -20,7 +19,6 @@ const navItems: NavItem[] = [
   { id: 'education', label: 'Education' },
   { id: 'certifications', label: 'Certifications' },
   { id: 'contact', label: 'Contact' },
-  { id: 'reviews', label: 'Reviews' },
 ]
 
 export default function HomePage() {
@@ -41,7 +39,6 @@ export default function HomePage() {
         <EducationSection />
         <CertificationsSection />
         <ContactSection />
-        <ReviewSection />
       </main>
 
       <Footer />
