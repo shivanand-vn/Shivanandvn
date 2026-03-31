@@ -30,7 +30,7 @@ export default function ExperienceSection() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
+              transition={{ duration: 0.3, delay: idx * 0.03 }}
               whileHover={{ y: -4, scale: 1.01 }}
             >
               <Card className="border-zinc-200/40 bg-white/5 shadow-lg shadow-black/30 ring-1 ring-zinc-200/20 backdrop-blur-xl transition-colors group-hover:border-emerald-400/80 group-hover:ring-emerald-400/40 dark:border-zinc-800/70 dark:bg-zinc-950/40 dark:shadow-black/60">

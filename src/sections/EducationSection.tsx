@@ -31,10 +31,10 @@ const educationDetails = [
 //   Row 2: BSc (col1)   |  PUC  (col2)
 // U-path flow: SSLC → PUC → BSc → MCA (clockwise U starting top right)
 const displayOrder = [
-  { ...portfolio.education[0], ...educationDetails[0], side: 'left' as const, dotDelay: 2.4, mobileOrder: 'order-1 md:order-none' },  // MCA (last)
-  { ...portfolio.education[3], ...educationDetails[3], side: 'right' as const, dotDelay: 0.2, mobileOrder: 'order-4 md:order-none' }, // SSLC (first)
-  { ...portfolio.education[1], ...educationDetails[1], side: 'left' as const, dotDelay: 1.7, mobileOrder: 'order-2 md:order-none' },  // BSc (third)
-  { ...portfolio.education[2], ...educationDetails[2], side: 'right' as const, dotDelay: 0.8, mobileOrder: 'order-3 md:order-none' }, // PUC (second)
+  { ...portfolio.education[0], ...educationDetails[0], side: 'left' as const, dotDelay: 1.2, mobileOrder: 'order-1 md:order-none' },  // MCA (last)
+  { ...portfolio.education[3], ...educationDetails[3], side: 'right' as const, dotDelay: 0.1, mobileOrder: 'order-4 md:order-none' }, // SSLC (first)
+  { ...portfolio.education[1], ...educationDetails[1], side: 'left' as const, dotDelay: 0.9, mobileOrder: 'order-2 md:order-none' },  // BSc (third)
+  { ...portfolio.education[2], ...educationDetails[2], side: 'right' as const, dotDelay: 0.4, mobileOrder: 'order-3 md:order-none' }, // PUC (second)
 ]
 
 export default function EducationSection() {
@@ -75,7 +75,7 @@ export default function EducationSection() {
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'linear' }}
+            transition={{ duration: 0.4, delay: 0.1, ease: 'linear' }}
           />
           
           {/* 2. Bottom Line (Bottom Right Corner -> Bottom Left Corner) */}
@@ -85,7 +85,7 @@ export default function EducationSection() {
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.5, delay: 1.0, ease: 'linear' }}
+            transition={{ duration: 0.3, delay: 0.5, ease: 'linear' }}
           />
 
           {/* 3. Left Line (Bottom Left Corner -> MCA) */}
@@ -95,7 +95,7 @@ export default function EducationSection() {
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, delay: 1.5, ease: 'linear' }}
+            transition={{ duration: 0.4, delay: 0.8, ease: 'linear' }}
           />
 
 
@@ -114,7 +114,7 @@ export default function EducationSection() {
                   initial={{ opacity: 0, y: 14 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.45, delay: idx * 0.12 }}
+                  transition={{ duration: 0.3, delay: idx * 0.05 }}
                   className={`relative ${e.mobileOrder}`}
                 >
                   {/* Glowing dot on left/right edge bridging the gap to the line */}

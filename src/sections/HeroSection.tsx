@@ -15,7 +15,7 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className="flex flex-col items-center"
             >
               <div className="inline-flex items-center gap-1">
@@ -32,7 +32,7 @@ export default function HeroSection() {
               <motion.p
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.05 }}
+                transition={{ duration: 0.3, delay: 0.02 }}
                 className="mt-3 text-center text-base font-medium text-zinc-500 dark:text-zinc-300 sm:text-lg"
               >
                 {portfolio.role}
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.04 }}
               className="mt-8 text-lg font-semibold tracking-tight text-zinc-900 dark:text-white sm:text-xl"
             >
               Building reliable apps with{' '}
@@ -59,7 +59,7 @@ export default function HeroSection() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
+              transition={{ duration: 0.3, delay: 0.06 }}
               className="mt-4 max-w-xl text-base leading-relaxed text-zinc-600 dark:text-zinc-300"
             >
               I’m an MCA student focused on full stack development and desktop automation. I enjoy
@@ -69,7 +69,7 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.18 }}
+              transition={{ duration: 0.3, delay: 0.08 }}
               className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
               <Button
@@ -95,7 +95,7 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.24 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className="mt-7 flex items-center justify-between gap-6"
             >
               <SocialLinks
@@ -112,7 +112,7 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
               className="relative h-72 w-72 sm:h-96 sm:w-96"
             >
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/25 via-fuchsia-500/20 to-emerald-500/20 blur-2xl dark:from-indigo-500/35 dark:via-fuchsia-500/25 dark:to-emerald-500/25" />

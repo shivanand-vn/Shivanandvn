@@ -21,7 +21,7 @@ export default function Background() {
           
           {/* Top Left - Emerald Ambient Glow */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 
               opacity: [0.15, 0.25, 0.15], 
               scale: [1, 1.05, 1],
@@ -34,27 +34,27 @@ export default function Background() {
 
           {/* Bottom Right - Indigo/Purple Orbit */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 
               opacity: [0.1, 0.2, 0.1], 
               scale: [1, 1.1, 1],
               x: [0, -30, 0],
               y: [0, -40, 0]
             }}
-            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute -bottom-[10%] -right-[10%] h-[600px] w-[600px] rounded-full bg-indigo-300/60 blur-[130px] dark:bg-indigo-600/20"
           />
 
           {/* Center - Deep Cyan Pulse */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 
               opacity: [0.05, 0.15, 0.05], 
               scale: [1, 1.1, 1],
               x: [0, 20, -20, 0],
               y: [0, -20, 20, 0]
             }}
-            transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+            transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute left-[30%] top-[40%] h-[400px] w-[400px] rounded-full bg-sky-400/40 blur-[120px] dark:bg-cyan-500/10"
           />
         </div>

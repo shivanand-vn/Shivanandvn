@@ -72,7 +72,7 @@ export default function SkillsSection() {
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                transition={{ duration: 0.3, delay: idx * 0.03 }}
               >
                 <Card className="h-full">
                   <div className="flex items-center justify-between gap-4">

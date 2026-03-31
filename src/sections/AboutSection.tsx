@@ -31,7 +31,7 @@ export default function AboutSection() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             className="text-xl font-medium leading-relaxed text-zinc-800 dark:text-zinc-100 sm:text-2xl"
           >
             {first}
@@ -42,7 +42,7 @@ export default function AboutSection() {
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="my-8 h-[2px] origin-left rounded-full bg-gradient-to-r from-emerald-400 via-indigo-400 to-transparent"
           />
 
@@ -54,7 +54,7 @@ export default function AboutSection() {
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 + 0.3 }}
+                transition={{ duration: 0.3, delay: i * 0.05 + 0.15 }}
                 className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400"
               >
                 {p}
