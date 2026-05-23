@@ -1,9 +1,18 @@
 import { motion } from 'framer-motion'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import type { Project } from './ProjectCard'
 import Chip from './Chip'
 import Button from './Button'
 import ProjectPreviewStrip from './ProjectPreviewStrip'
+
+export type Project = {
+  title: string
+  tech: readonly string[]
+  description: string
+  highlights: readonly string[]
+  links?: { github?: string; live?: string }
+  images?: readonly { src: string; alt: string }[]
+  appreciationBadge?: string
+}
 
 export default function FeaturedProject({
   project,

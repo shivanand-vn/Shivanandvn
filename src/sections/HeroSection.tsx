@@ -118,9 +118,11 @@ export default function HeroSection() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/25 via-fuchsia-500/20 to-emerald-500/20 blur-2xl dark:from-indigo-500/35 dark:via-fuchsia-500/25 dark:to-emerald-500/25" />
               <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white/80 bg-zinc-900 shadow-xl shadow-black/30 dark:border-zinc-900">
                 <img
-                  src="/profile-shivanand.png"
+                  src="/profile-shivanand.webp"
                   alt={portfolio.name}
                   className="h-full w-full object-cover"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
             </motion.div>

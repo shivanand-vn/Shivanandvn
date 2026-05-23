@@ -17,7 +17,7 @@ export default function ProjectPreviewStrip({ images }: { images: readonly Img[]
     const img = images[0]
     return (
       <div className="relative h-full w-full">
-        <img src={img.src} alt={img.alt} className="h-full w-full object-cover" loading="lazy" />
+        <img src={img.src} alt={img.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
       </div>
     )
   }
@@ -76,7 +76,7 @@ export default function ProjectPreviewStrip({ images }: { images: readonly Img[]
             key={img.src}
             className="relative w-full flex-none snap-start overflow-hidden aspect-[16/9]"
           >
-            <img src={img.src} alt={img.alt} className="h-full w-full object-cover" loading="lazy" />
+            <img src={img.src} alt={img.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
         ))}
       </div>

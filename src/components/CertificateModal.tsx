@@ -58,6 +58,7 @@ export default function CertificateModal({ isOpen, onClose, certificate }: Props
                 <img
                   src={certificate.image}
                   alt={certificate.title}
+                  decoding="async"
                   className="max-h-[80vh] w-auto max-w-full rounded border border-zinc-200 object-contain shadow-sm dark:border-zinc-800"
                 />
               </div>
