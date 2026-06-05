@@ -40,7 +40,7 @@ export default function HomePage() {
   const { theme, toggle } = useTheme()
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <Background />
 
       <Navbar items={navItems} theme={theme} onToggleTheme={toggle} />
