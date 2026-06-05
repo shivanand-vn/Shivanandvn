@@ -16,14 +16,14 @@ export default function CertificationsSection() {
     <section id="certifications" className="section-shell">
       <div className="container-shell">
         <SectionHeading
-          eyebrow="Certifications"
-          title="Certifications & achievements"
-          description="Learning milestones and recognition."
+          eyebrow="Achievements"
+          title="Certifications & Key Milestones"
+          description="Verified technical credentials, client appreciations, and competitive hackathon milestones."
         />
 
-        <div className="mb-12">
-          <h3 className="mb-6 text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-            Professional Recognition (Client Appreciation)
+        <div className="mb-14">
+          <h3 className="mb-6 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 border-l-2 border-emerald-500 pl-3">
+            Professional Recognition & Client Appreciations
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {portfolio.appreciations.map((app, index) => (
@@ -49,7 +49,7 @@ export default function CertificationsSection() {
         </div>
 
         <div>
-          <h3 className="mb-6 text-xl font-semibold text-zinc-900 dark:text-zinc-50">
+          <h3 className="mb-6 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 border-l-2 border-purple-500 pl-3">
             Technical Certifications & Hackathons
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

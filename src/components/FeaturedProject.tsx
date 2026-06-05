@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { FiCheckCircle, FiExternalLink, FiGithub } from 'react-icons/fi'
 import Chip from './Chip'
 import Button from './Button'
 import ProjectPreviewStrip from './ProjectPreviewStrip'
@@ -23,84 +23,101 @@ export default function FeaturedProject({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 14 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-90px' }}
-      transition={{ duration: 0.45 }}
+      transition={{ duration: 0.5 }}
       className={[
-        'grid gap-6 rounded-3xl border border-zinc-200/70 bg-white/60 p-5 shadow-sm backdrop-blur dark:border-zinc-800/70 dark:bg-zinc-950/20',
-        'lg:grid-cols-12 lg:items-start lg:p-6',
+        'glass-card rounded-[2rem] p-6 lg:p-8 grid gap-8 lg:grid-cols-12 lg:items-center',
+        reverse ? 'lg:hover:border-purple-500/30' : 'lg:hover:border-emerald-500/30',
       ].join(' ')}
     >
+      {/* Image Preview Side */}
       <div
         className={[
-          'relative overflow-hidden rounded-2xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 to-zinc-100 dark:border-zinc-800/70 dark:from-zinc-950 dark:to-zinc-900',
-          'lg:col-span-7',
+          'relative overflow-hidden rounded-2xl border border-zinc-200/60 dark:border-zinc-800/40 bg-zinc-100 dark:bg-zinc-900 lg:col-span-7 shadow-inner',
           reverse ? 'lg:order-2' : '',
         ].join(' ')}
       >
-        <div className="absolute inset-0 opacity-80">
-          <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-500/25 to-fuchsia-500/15 blur-3xl dark:from-indigo-500/25 dark:to-fuchsia-500/20" />
-          <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-emerald-500/15 to-sky-500/15 blur-3xl dark:from-emerald-500/18 dark:to-sky-500/18" />
+        {/* Glow ambient inside image container */}
+        <div className="absolute inset-0 opacity-40 pointer-events-none">
+          <div className="absolute -left-20 -top-20 h-52 w-52 rounded-full bg-gradient-to-br from-indigo-500/20 to-fuchsia-500/10 blur-3xl" />
+          <div className="absolute -bottom-20 -right-20 h-52 w-52 rounded-full bg-gradient-to-br from-emerald-500/20 to-sky-500/10 blur-3xl" />
         </div>
 
         <div className="relative w-full overflow-hidden rounded-2xl">
           {project.images?.length ? (
-            <>
-              <ProjectPreviewStrip images={project.images} />
-            </>
+            <ProjectPreviewStrip images={project.images} />
           ) : (
-            <div className="flex h-full items-center justify-center">
-              <div className="rounded-2xl border border-zinc-200/70 bg-white/60 px-5 py-4 text-sm font-medium text-zinc-700 shadow-sm backdrop-blur dark:border-zinc-800/70 dark:bg-zinc-950/30 dark:text-zinc-200">
-                Add a project preview image
-              </div>
+            <div className="flex h-56 items-center justify-center">
+              <span className="text-xs font-semibold text-zinc-400 dark:text-zinc-500">
+                Preview images unavailable
+              </span>
             </div>
           )}
         </div>
       </div>
 
-      <div className={['lg:col-span-5', reverse ? 'lg:order-1' : ''].join(' ')}>
-        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-          Featured Project
-        </p>
-        <h3 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
+      {/* Description Info Side */}
+      <div className={['lg:col-span-5 flex flex-col justify-center', reverse ? 'lg:order-1' : ''].join(' ')}>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="inline-block rounded-md bg-zinc-100 dark:bg-zinc-800/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+            Case Study
+          </span>
+          {project.appreciationBadge ? (
+            <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/20 bg-amber-500/5 px-2.5 py-0.5 text-[10px] font-bold text-amber-600 dark:border-amber-400/20 dark:bg-amber-400/10 dark:text-amber-400">
+              {project.appreciationBadge}
+            </span>
+          ) : null}
+        </div>
+
+        <h3 className="mt-4 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-2xl">
           {project.title}
         </h3>
-        {project.appreciationBadge ? (
-          <div className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 px-2.5 py-1 text-xs font-medium text-yellow-600 dark:border-yellow-400/20 dark:bg-yellow-400/10 dark:text-yellow-400">
-            {project.appreciationBadge}
-          </div>
-        ) : null}
-        <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+
+        <p className="mt-4 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
           {project.description}
         </p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        {/* Bullet checklist highlights */}
+        <ul className="mt-5 space-y-2.5 text-xs text-zinc-600 dark:text-zinc-300">
+          {project.highlights.slice(0, 5).map((h) => (
+            <li key={h} className="flex items-start gap-2.5">
+              <FiCheckCircle className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-emerald-500 dark:text-emerald-400" />
+              <span className="leading-tight">{h}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Tech Badges */}
+        <div className="mt-6 flex flex-wrap gap-1.5">
           {project.tech.map((t) => (
             <Chip key={t}>{t}</Chip>
           ))}
         </div>
 
-        <ul className="mt-5 space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
-          {project.highlights.slice(0, 4).map((h) => (
-            <li key={h} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-zinc-400 dark:bg-zinc-600" />
-              <span>{h}</span>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-6 flex flex-wrap gap-2">
+        {/* Call to Actions */}
+        <div className="mt-8 flex flex-wrap gap-2.5">
           {project.links?.github ? (
-            <Button href={project.links.github} variant="secondary" ariaLabel="Open GitHub repository">
-              <FiGithub />
-              GitHub
+            <Button
+              href={project.links.github}
+              variant="secondary"
+              ariaLabel="View Source Code on GitHub"
+              className="text-xs px-4 py-1.5"
+            >
+              <FiGithub className="h-3.5 w-3.5" />
+              GitHub Repository
             </Button>
           ) : null}
           {project.links?.live ? (
-            <Button href={project.links.live} variant="ghost" ariaLabel="Open live site">
-              <FiExternalLink />
-              Live
+            <Button
+              href={project.links.live}
+              variant="primary"
+              ariaLabel="Launch Live Demo"
+              className="text-xs px-4 py-1.5 shadow-md shadow-emerald-500/10 dark:shadow-none"
+            >
+              <FiExternalLink className="h-3.5 w-3.5" />
+              Live Demonstration
             </Button>
           ) : null}
         </div>
