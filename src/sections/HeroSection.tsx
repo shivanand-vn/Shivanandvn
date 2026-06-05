@@ -7,78 +7,76 @@ import SocialLinks from '../components/SocialLinks'
 
 export default function HeroSection() {
   return (
-    <section id="top" className="section-shell pt-28 sm:pt-32">
-      <div className="container-shell">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          {/* Text side (left) */}
-          <div className="order-2 flex flex-col items-start lg:order-1">
+    <section id="top" className="relative section-shell pt-32 sm:pt-40 flex min-h-[92vh] flex-col justify-center">
+      <div className="container-shell relative z-10">
+        <div className="grid items-center gap-12 lg:grid-cols-12">
+          
+          {/* Left Text & Stats Column */}
+          <div className="order-2 flex flex-col items-start lg:col-span-7 lg:order-1">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="flex flex-col items-center"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-start"
             >
-              <div className="inline-flex items-center gap-1">
-                <span className="text-5xl font-semibold leading-none text-indigo-400/90 dark:text-indigo-300/90 sm:text-6xl md:text-7xl">
-                  &lt;
-                </span>
-                <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white sm:text-4xl md:text-5xl">
-                  {portfolio.name}
-                </h1>
-                <span className="text-5xl font-semibold leading-none text-indigo-400/90 dark:text-indigo-300/90 sm:text-6xl md:text-7xl">
-                  /&gt;
-                </span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-600 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-400">
+                ✨ MCA Scholar & Software Developer
               </div>
+              
+              <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl md:text-6xl leading-[1.1]">
+                Turning Workflows Into{' '}
+                <span className="text-gradient-emerald">
+                  Reliable
+                </span>{' '}
+                &{' '}
+                <span className="text-gradient-purple">
+                  Elegant
+                </span>{' '}
+                Products
+              </h1>
+              
               <motion.p
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.02 }}
-                className="mt-3 text-center text-base font-medium text-zinc-500 dark:text-zinc-300 sm:text-lg"
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="mt-6 max-w-xl text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg"
               >
-                {portfolio.role}
+                I'm <strong className="font-semibold text-zinc-900 dark:text-zinc-50">{portfolio.name}</strong>. 
+                I specialize in full-stack engineering and desktop automation, converting manual real-world operations into fast, clean, user-friendly digital systems.
               </motion.p>
+
+              {/* Horizontal primary stack tags */}
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                  Primary Stack:
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {['Python', 'React', 'Node.js', 'Express', 'MySQL', 'MongoDB'].map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-white/70 dark:bg-zinc-900/40 border border-zinc-200/50 dark:border-zinc-800/40 px-3 py-1 text-xs font-semibold text-zinc-700 dark:text-zinc-350"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.04 }}
-              className="mt-8 text-lg font-semibold tracking-tight text-zinc-900 dark:text-white sm:text-xl"
-            >
-              Building reliable apps with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-fuchsia-600 dark:from-indigo-400 dark:to-fuchsia-400">
-                Python
-              </span>
-              ,{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-600 dark:from-emerald-400 dark:to-sky-400">
-                React
-              </span>{' '}
-              & modern web tech.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.06 }}
-              className="mt-4 max-w-xl text-base leading-relaxed text-zinc-600 dark:text-zinc-300"
-            >
-              I’m an MCA student focused on full stack development and desktop automation. I enjoy
-              turning real-world workflows into clean, user-friendly products.
-            </motion.p>
-
+            {/* Buttons & Social Hub */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.08 }}
-              className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-8 flex flex-col gap-4 w-full sm:w-auto sm:flex-row sm:items-center"
             >
               <Button
                 onClick={() => scrollToId('contact')}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto shadow-lg shadow-emerald-500/15 dark:shadow-none"
                 ariaLabel="Scroll to contact"
               >
-                <FiMail />
-                Contact
+                <FiMail className="text-base" />
+                Let's Connect
               </Button>
               <Button
                 variant="secondary"
@@ -86,49 +84,104 @@ export default function HeroSection() {
                 className="w-full sm:w-auto"
                 ariaLabel="Scroll to projects"
               >
-                <FiArrowDown />
-                View projects
+                <FiArrowDown className="text-base animate-bounce" />
+                Explore Projects
               </Button>
-              
+
+              <div className="flex justify-center sm:ml-4">
+                <SocialLinks
+                  github={portfolio.links.github}
+                  linkedin={portfolio.links.linkedin}
+                  email={portfolio.email}
+                  phone={portfolio.phone}
+                />
+              </div>
             </motion.div>
 
+            {/* Stats Dashboard */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              className="mt-7 flex items-center justify-between gap-6"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-12 grid grid-cols-3 gap-6 w-full border-t border-zinc-200/60 pt-8 dark:border-zinc-800/40"
             >
-              <SocialLinks
-                github={portfolio.links.github}
-                linkedin={portfolio.links.linkedin}
-                email={portfolio.email}
-                phone={portfolio.phone}
-              />
+              <div>
+                <p className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+                  8.45
+                </p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  BSc CGPA
+                </p>
+              </div>
+              <div>
+                <p className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+                  2
+                </p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  Client Apps
+                </p>
+              </div>
+              <div>
+                <p className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+                  5+
+                </p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  Certifications
+                </p>
+              </div>
             </motion.div>
           </div>
 
-          {/* Profile image (right) */}
-          <div className="order-1 flex justify-center lg:order-2">
+          {/* Right Column: Large Premium Profile Photo */}
+          <div className="order-1 flex justify-center lg:col-span-5 lg:order-2">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.05 }}
-              className="relative h-72 w-72 sm:h-96 sm:w-96"
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="relative flex items-center justify-center h-72 w-72 sm:h-96 sm:w-96 select-none"
             >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/25 via-fuchsia-500/20 to-emerald-500/20 blur-2xl dark:from-indigo-500/35 dark:via-fuchsia-500/25 dark:to-emerald-500/25" />
-              <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white/80 bg-zinc-900 shadow-xl shadow-black/30 dark:border-zinc-900">
+              {/* Outer pulsing glow ring */}
+              <div className="absolute inset-[-10px] rounded-full bg-gradient-to-tr from-emerald-500/20 via-purple-500/10 to-transparent blur-2xl animate-pulse-slow" />
+              
+              {/* Spinning outline tracks */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+                className="absolute inset-[-6px] rounded-full border border-dashed border-zinc-300 dark:border-zinc-800"
+              />
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 35, repeat: Infinity, ease: 'linear' }}
+                className="absolute inset-[-14px] rounded-full border border-dashed border-emerald-500/20 dark:border-emerald-400/10"
+              />
+
+              {/* Main Circular Portrait Container (Large Size) */}
+              <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white dark:border-zinc-900 bg-zinc-950 shadow-2xl shadow-zinc-950/20 dark:shadow-black/60">
                 <img
                   src="/profile-shivanand.webp"
                   alt={portfolio.name}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-103"
                   fetchPriority="high"
                   decoding="async"
                 />
               </div>
             </motion.div>
           </div>
-
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity cursor-pointer" onClick={() => scrollToId('about')}>
+        <div className="h-8 w-5 rounded-full border-2 border-zinc-400/60 p-1 flex justify-center dark:border-zinc-700/60">
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+            className="h-1.5 w-1.5 rounded-full bg-zinc-600 dark:bg-zinc-400"
+          />
+        </div>
+        <span className="text-[9px] font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-500">
+          Scroll
+        </span>
       </div>
     </section>
   )

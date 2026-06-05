@@ -19,7 +19,7 @@ export default function ProjectsSection() {
           }
         />
 
-        <div className="space-y-6">
+        <div className="space-y-12">
           {portfolio.projects.map((p, idx) => (
             <FeaturedProject key={p.title} project={p} reverse={idx % 2 === 1} />
           ))}

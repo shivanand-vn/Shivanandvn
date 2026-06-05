@@ -16,7 +16,7 @@
   }
 
   body {
-    @apply bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+    @apply bg-slate-50 font-sans text-zinc-800 antialiased transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100;
   }
 }
 
@@ -26,7 +26,7 @@
   }
 
   .section-shell {
-    @apply scroll-mt-24 py-16 sm:py-20;
+    @apply scroll-mt-24 py-20 sm:py-24;
   }
 
   .no-scrollbar::-webkit-scrollbar {
@@ -35,6 +35,32 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Glassmorphism Panel styles that look premium in both Light and Dark mode */
+  .glass-card {
+    @apply border border-zinc-200/50 bg-white/70 shadow-sm backdrop-blur-xl transition-all duration-300 dark:border-zinc-800/40 dark:bg-zinc-950/20 dark:shadow-none;
+  }
+
+  .glass-card-hover {
+    @apply hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/5 dark:hover:border-emerald-400/30 dark:hover:shadow-emerald-500/10;
+  }
+
+  .glass-card-hover-purple {
+    @apply hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/5 dark:hover:border-purple-400/30 dark:hover:shadow-purple-500/10;
+  }
+
+  /* Gradient Text styling */
+  .text-gradient-emerald {
+    @apply bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent dark:from-emerald-400 dark:to-teal-300;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent dark:from-purple-400 dark:to-indigo-300;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-amber-500 to-yellow-400 bg-clip-text text-transparent dark:from-amber-400 dark:to-yellow-300;
   }
 }
 
