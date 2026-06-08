@@ -19,6 +19,7 @@ export const portfolio = {
     tools: ['GitHub', 'VS Code', 'Postman', 'MySQL Workbench', 'MongoDB Compass'],
     other: [
       'Tkinter',
+      'CustomTkinter',
       'ReportLab',
       'REST APIs',
       'OOP',
@@ -130,6 +131,29 @@ export const portfolio = {
         'Implemented Transfer Learning with MobileNetV2 for efficient model training',
         'Built using Python, TensorFlow / Keras, and OpenCV',
         'Applied image preprocessing and data augmentation to improve model accuracy',
+      ],
+    },
+    {
+      title: 'PharmIQ – Pharmaceutical Distribution Management System',
+      images: [
+        { src: '/project-previews/pharmiq-01.png', alt: 'PharmIQ login page' },
+        { src: '/project-previews/pharmiq-02.png', alt: 'PharmIQ dashboard' },
+        { src: '/project-previews/pharmiq-03.png', alt: 'PharmIQ create invoice' },
+        { src: '/project-previews/pharmiq-04.png', alt: 'PharmIQ invoice history and preview' },
+        { src: '/project-previews/pharmiq-05.png', alt: 'PharmIQ reports and analytics' },
+      ],
+      tech: ['Python', 'CustomTkinter', 'MySQL', 'ReportLab'],
+      description:
+        'Desktop-based pharmaceutical distribution and inventory management application designed to streamline billing, inventory tracking, reporting, and day-to-day operations for pharmaceutical distributors and medical wholesalers.',
+      links: {
+        github: 'https://github.com/shivanand-vn/Pharmiq',
+      },
+      highlights: [
+        'Invoice & billing management',
+        'Batch and expiry tracking',
+        'Inventory & stock monitoring',
+        'Advanced pharma-style reporting system with Excel (.xlsx) & PDF (.pdf) generation',
+        'Professional reporting engine generating structured reports with clean layouts, totals, and summaries',
       ],
     },
   ],
