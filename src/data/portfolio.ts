@@ -12,15 +12,18 @@ export const portfolio = {
     'Skilled in building real-world applications using Tkinter, MySQL, React, Node.js, Express, MongoDB, and modern web technologies. Seeking a software development role to apply technical skills and grow professionally.',
   ],
   skills: {
-    languages: ['Python', 'C', 'JavaScript'],
+    languages: ['Python', 'C', 'C++', 'JavaScript'],
     frontend: ['HTML', 'CSS', 'React'],
     backend: ['Node.js', 'Express'],
-    databases: ['MySQL', 'MongoDB'],
+    databases: ['MySQL', 'MongoDB', 'Firebase'],
     tools: ['GitHub', 'VS Code', 'Postman', 'MySQL Workbench', 'MongoDB Compass'],
     other: [
       'Tkinter',
       'CustomTkinter',
       'ReportLab',
+      'IoT',
+      'ESP32',
+      'Blynk',
       'REST APIs',
       'OOP',
       'Data Structures',
@@ -155,6 +158,27 @@ export const portfolio = {
         'Advanced pharma-style reporting system with Excel (.xlsx) & PDF (.pdf) generation',
         'Professional reporting engine generating structured reports with clean layouts, totals, and summaries',
       ],
+    },
+    {
+      title: 'AI & IoT Based Smart Waste Management System',
+      images: [
+        { src: '/project-previews/waste-management-01.png', alt: 'AI & IoT Smart Waste Management System diagram' },
+        { src: '/project-previews/waste-management-02.png', alt: 'AI & IoT Smart Waste Management System architecture' },
+      ],
+      tech: ['IoT', 'ESP32', 'Firebase', 'Blynk', 'AI / ML'],
+      description:
+        'Intelligent waste management system utilizing IoT sensors and AI to monitor bin levels in real-time, sending push notifications and automated email alerts, and predicting when bins will fill next.',
+      links: {
+        github: 'https://github.com/shivanand-vn/AI-IoT-based-Smart-Waste-Management-System',
+      },
+      highlights: [
+        'Real-time waste level detection using ultrasonic sensors',
+        'Instant push notifications via the Blynk mobile app',
+        'Automated email alerts sent to registered users when bin is full',
+        'Firebase cloud integration for real-time data storage and sync',
+        'AI-powered prediction of when the bin is likely to fill next',
+      ],
+      appreciationBadge: '🏆 Selected for INCOMEX 2026 & CHE’TECH 2026',
     },
   ],
   experience: [
