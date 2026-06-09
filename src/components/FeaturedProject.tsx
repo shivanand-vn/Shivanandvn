@@ -12,6 +12,7 @@ export type Project = {
   links?: { github?: string; live?: string }
   images?: readonly { src: string; alt: string }[]
   appreciationBadge?: string
+  tag?: string
 }
 
 export default function FeaturedProject({
@@ -61,9 +62,11 @@ export default function FeaturedProject({
       {/* Description Info Side */}
       <div className={['lg:col-span-5 flex flex-col justify-center', reverse ? 'lg:order-1' : ''].join(' ')}>
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-block rounded-md bg-zinc-100 dark:bg-zinc-800/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-            Case Study
-          </span>
+          {project.tag ? (
+            <span className="inline-block rounded-md bg-zinc-100 dark:bg-zinc-800/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+              {project.tag}
+            </span>
+          ) : null}
           {project.appreciationBadge ? (
             <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/20 bg-amber-500/5 px-2.5 py-0.5 text-[10px] font-bold text-amber-600 dark:border-amber-400/20 dark:bg-amber-400/10 dark:text-amber-400">
               {project.appreciationBadge}
