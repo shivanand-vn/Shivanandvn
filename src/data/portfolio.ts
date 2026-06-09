@@ -33,6 +33,7 @@ export const portfolio = {
   projects: [
     {
       title: 'SV Pharma – Pharmacy Management System',
+      tag: 'E-commerce',
       images: [
         { src: '/project-previews/sv-pharma-01.webp', alt: 'SV Pharma preview 1' },
         { src: '/project-previews/sv-pharma-02.webp', alt: 'SV Pharma preview 2' },
@@ -64,6 +65,7 @@ export const portfolio = {
     },
     {
       title: 'Transport Management System',
+      tag: 'Billing System',
       images: [
         { src: '/project-previews/transport-01.webp', alt: 'Transport Management System preview 1' },
         { src: '/project-previews/transport-02.webp', alt: 'Transport Management System preview 2' },
@@ -91,6 +93,7 @@ export const portfolio = {
     },
     {
       title: 'UI MasterLine 2025 – Student & Teacher Management UI',
+      tag: 'UI/UX Design',
       images: [
         { src: '/project-previews/edulearn-01.webp', alt: 'EduLearn UI preview 1' },
         { src: '/project-previews/edulearn-02.webp', alt: 'EduLearn UI preview 2' },
@@ -116,6 +119,7 @@ export const portfolio = {
     },
     {
       title: 'Vehicle Dent Detection using Deep Learning',
+      tag: 'AI & Computer Vision',
       images: [
         { src: '/project-previews/Vehicle dent-1.webp', alt: 'Vehicle dent-1' },
         { src: '/project-previews/Vehicle dent-2.webp', alt: 'Vehicle dent-2' },
@@ -138,6 +142,7 @@ export const portfolio = {
     },
     {
       title: 'PharmIQ – Pharmaceutical Distribution Management System',
+      tag: 'Billing System',
       images: [
         { src: '/project-previews/pharmiq-01.png', alt: 'PharmIQ login page' },
         { src: '/project-previews/pharmiq-02.png', alt: 'PharmIQ dashboard' },
@@ -161,6 +166,7 @@ export const portfolio = {
     },
     {
       title: 'AI & IoT Based Smart Waste Management System',
+      tag: 'IoT-AI',
       images: [
         { src: '/project-previews/waste-management-01.png', alt: 'AI & IoT Smart Waste Management System diagram' },
         { src: '/project-previews/waste-management-02.png', alt: 'AI & IoT Smart Waste Management System architecture' },
@@ -220,7 +226,7 @@ export const portfolio = {
     {
       title: 'Client Appreciation – SV Pharma',
       issuer: 'Shree Veerabhadreshwar Pharma',
-      year: '2025',
+      year: '2026',
       image: '/certificates/sv-pharma-appreciation.webp',
       description: 'Received an official appreciation letter from SGT – Shree Veerabhadreshwar Pharma for successfully designing, developing, and deploying an online pharmacy platform. The system helps the business manage customer accounts, showcase medicines online, process orders smoothly, track payments, and monitor pending balances while improving operational workflow.',
       badge: 'Client Appreciation',
