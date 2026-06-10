@@ -13,7 +13,7 @@ export const portfolio = {
   ],
   skills: {
     languages: ['Python', 'C', 'JavaScript'],
-    frontend: ['React', 'TypeScript', 'TailwindCSS', 'HTML', 'CSS'],
+    frontend: ['React', 'TypeScript', 'TailwindCSS', 'HTML'],
     backend: ['Node.js', 'Express'],
     databases: ['MySQL', 'MongoDB', 'Firebase'],
     tools: ['GitHub', 'VS Code', 'Postman', 'MySQL Workbench', 'MongoDB Compass'],

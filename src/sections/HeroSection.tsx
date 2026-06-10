@@ -7,7 +7,7 @@ import SocialLinks from '../components/SocialLinks'
 
 export default function HeroSection() {
   return (
-    <section id="top" className="relative section-shell pt-24 sm:pt-32 flex min-h-[92vh] flex-col justify-center">
+    <section id="top" className="relative section-shell pt-24 sm:pt-32 pb-4 sm:pb-6 flex min-h-[92vh] flex-col justify-center">
       <div className="container-shell relative z-10">
         
         {/* Water-Drop Glassmorphism Container Card */}

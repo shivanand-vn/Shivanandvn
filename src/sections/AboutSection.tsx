@@ -34,7 +34,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="section-shell relative overflow-hidden">
+    <section id="about" className="section-shell pt-6 sm:pt-8 relative overflow-hidden">
       {/* Background soft ambient lights */}
       <div className="absolute right-[10%] top-[20%] -z-10 h-72 w-72 rounded-full bg-emerald-500/5 blur-[80px]" />
       

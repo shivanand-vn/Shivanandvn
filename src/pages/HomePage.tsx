@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Background from '../components/Background'
 import { useTheme } from '../hooks/useTheme'
 import HeroSection from '../sections/HeroSection'
+import LogoMarquee from '../components/LogoMarquee'
 import AboutSection from '../sections/AboutSection'
 
 // Lazy loaded below-the-fold sections
@@ -47,6 +48,7 @@ export default function HomePage() {
 
       <main>
         <HeroSection />
+        <LogoMarquee />
         <AboutSection />
         
         <Suspense fallback={<SectionFallback />}>
