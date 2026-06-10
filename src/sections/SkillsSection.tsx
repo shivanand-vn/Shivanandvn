@@ -118,7 +118,7 @@ export default function SkillsSection() {
           description="A balanced stack optimized for desktop productivity, secure databases, and responsive web products."
         />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-12">
+        <div className="flex flex-wrap justify-center gap-6">
           {groups.map((g, idx) => {
             const list = portfolio.skills[g.key]
             return (
@@ -128,10 +128,7 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className={[
-                  'glass-card glass-card-hover flex flex-col p-6 rounded-3xl',
-                  idx < 4 ? 'lg:col-span-3' : 'lg:col-span-4',
-                ].join(' ')}
+                className="glass-card glass-card-hover flex flex-col p-6 rounded-3xl w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
               >
                 {/* Category Header */}
                 <div className="flex items-center justify-between gap-4">
@@ -151,7 +148,7 @@ export default function SkillsSection() {
                 </p>
 
                 {/* Subgrid of Technology Tags */}
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-2 justify-center">
                   {list.map((s) => {
                     const skillObj = skillIcons[s] || { icon: FiBox, color: '' }
                     const Icon = skillObj.icon
