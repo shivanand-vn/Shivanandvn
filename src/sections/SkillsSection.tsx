@@ -14,6 +14,8 @@ import {
   SiPython,
   SiReact,
   SiExpress,
+  SiTypescript,
+  SiTailwindcss,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 import SectionHeading from '../components/SectionHeading'
@@ -22,10 +24,12 @@ import { portfolio } from '../data/portfolio'
 const skillIcons: Record<string, { icon: IconType; color: string }> = {
   Python: { icon: SiPython, color: '#3776AB' },
   C: { icon: SiC, color: '#A8B9CC' },
+  TypeScript: { icon: SiTypescript, color: '#3178C6' },
   JavaScript: { icon: SiJavascript, color: '#F7DF1E' },
   HTML: { icon: SiHtml5, color: '#E34F26' },
   CSS: { icon: SiCss, color: '#1572B6' },
   React: { icon: SiReact, color: '#61DAFB' },
+  TailwindCSS: { icon: SiTailwindcss, color: '#06B6D4' },
   'Node.js': { icon: SiNodedotjs, color: '#339933' },
   Express: { icon: SiExpress, color: '#000000' }, // Monochrome
   MySQL: { icon: SiMysql, color: '#4479A1' },
@@ -35,12 +39,12 @@ const skillIcons: Record<string, { icon: IconType; color: string }> = {
   Postman: { icon: SiPostman, color: '#FF6C37' },
   'MySQL Workbench': { icon: SiMysql, color: '#4479A1' },
   'MongoDB Compass': { icon: SiMongodb, color: '#47A248' },
-  Tkinter: { icon: FiLayout, color: '#4F46E5' },
+  CustomTkinter: { icon: FiLayout, color: '#4F46E5' },
   ReportLab: { icon: FiTool, color: '#10B981' },
   'REST APIs': { icon: FiTool, color: '#F59E0B' },
   OOP: { icon: FiBox, color: '#EC4899' },
   'Data Structures': { icon: FiBox, color: '#8B5CF6' },
-  'Basic AI/ML': { icon: FiCpu, color: '#EF4444' },
+  'AI/ML': { icon: FiCpu, color: '#EF4444' },
 }
 
 const groups = [
@@ -123,9 +127,6 @@ export default function SkillsSection() {
                       {g.label}
                     </h3>
                   </div>
-                  <span className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-zinc-800/40 px-2 py-0.5 rounded-md">
-                    {list.length} Items
-                  </span>
                 </div>
 
                 {/* Layer Description */}
