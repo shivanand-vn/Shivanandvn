@@ -12,8 +12,8 @@ export const portfolio = {
     'Skilled in building real-world applications using Tkinter, MySQL, React, Node.js, Express, MongoDB, and modern web technologies. Seeking a software development role to apply technical skills and grow professionally.',
   ],
   skills: {
-    languages: ['Python', 'C', 'TypeScript', 'JavaScript'],
-    frontend: ['HTML', 'CSS', 'React', 'TailwindCSS'],
+    languages: ['Python', 'C', 'JavaScript'],
+    frontend: ['HTML', 'CSS', 'React', 'TailwindCSS', 'TypeScript'],
     backend: ['Node.js', 'Express'],
     databases: ['MySQL', 'MongoDB', 'Firebase'],
     tools: ['GitHub', 'VS Code', 'Postman', 'MySQL Workbench', 'MongoDB Compass'],
@@ -25,6 +25,7 @@ export const portfolio = {
       'Data Structures',
       'AI/ML',
     ],
+    cloud: ['Vercel', 'Render', 'Cloudflare R2'],
   },
   projects: [
     {

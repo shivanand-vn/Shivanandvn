@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import type { IconType } from 'react-icons'
-import { FiBox, FiCode, FiCpu, FiDatabase, FiLayout, FiTool } from 'react-icons/fi'
+import { FiBox, FiCode, FiCpu, FiDatabase, FiLayout, FiTool, FiCloud } from 'react-icons/fi'
 import {
   SiC,
   SiCss,
@@ -16,6 +16,9 @@ import {
   SiExpress,
   SiTypescript,
   SiTailwindcss,
+  SiVercel,
+  SiRender,
+  SiCloudflare,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 import SectionHeading from '../components/SectionHeading'
@@ -45,6 +48,9 @@ const skillIcons: Record<string, { icon: IconType; color: string }> = {
   OOP: { icon: FiBox, color: '#EC4899' },
   'Data Structures': { icon: FiBox, color: '#8B5CF6' },
   'AI/ML': { icon: FiCpu, color: '#EF4444' },
+  Vercel: { icon: SiVercel, color: '#000000' },
+  Render: { icon: SiRender, color: '#46E3B7' },
+  'Cloudflare R2': { icon: SiCloudflare, color: '#F38020' },
 }
 
 const groups = [
@@ -90,6 +96,13 @@ const groups = [
     desc: 'Desktop GUI kits, printable report generation, OOP designs, and machine learning models.',
     colorClass: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
   },
+  {
+    key: 'cloud',
+    label: 'Cloud Platforms',
+    icon: FiCloud,
+    desc: 'Deploying websites, running backend services, and configuring serverless cloud environments.',
+    colorClass: 'text-sky-500 bg-sky-500/10 border-sky-500/20',
+  },
 ] as const
 
 export default function SkillsSection() {
@@ -105,7 +118,7 @@ export default function SkillsSection() {
           description="A balanced stack optimized for desktop productivity, secure databases, and responsive web products."
         />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-12">
           {groups.map((g, idx) => {
             const list = portfolio.skills[g.key]
             return (
@@ -115,7 +128,10 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="glass-card glass-card-hover flex flex-col p-6 rounded-3xl"
+                className={[
+                  'glass-card glass-card-hover flex flex-col p-6 rounded-3xl',
+                  idx < 4 ? 'lg:col-span-3' : 'lg:col-span-4',
+                ].join(' ')}
               >
                 {/* Category Header */}
                 <div className="flex items-center justify-between gap-4">
