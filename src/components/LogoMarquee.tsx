@@ -107,7 +107,7 @@ export default function LogoMarquee() {
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 to-transparent dark:from-zinc-950 pointer-events-none z-10" />
 
       {/* Row 1: Left to Right */}
-      <div className="flex w-max items-center animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '38s' }}>
+      <div className="flex w-max items-center animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '68s' }}>
         <div className="flex items-center gap-16 pr-16">
           {row1Items.map((item, idx) => {
             const Icon = item.icon
@@ -133,7 +133,7 @@ export default function LogoMarquee() {
       </div>
 
       {/* Row 2: Right to Left */}
-      <div className="flex w-max items-center animate-marquee hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '34s' }}>
+      <div className="flex w-max items-center animate-marquee hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '60s' }}>
         <div className="flex items-center gap-16 pr-16">
           {row2Items.map((item, idx) => {
             const Icon = item.icon
@@ -159,7 +159,7 @@ export default function LogoMarquee() {
       </div>
 
       {/* Row 3: Left to Right */}
-      <div className="flex w-max items-center animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '42s' }}>
+      <div className="flex w-max items-center animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '74s' }}>
         <div className="flex items-center gap-16 pr-16">
           {row3Items.map((item, idx) => {
             const Icon = item.icon
