@@ -89,32 +89,6 @@ export const portfolio = {
       appreciationBadge: '🏆 Client Appreciation Received',
     },
     {
-      title: 'UI MasterLine 2025 – Student & Teacher Management UI',
-      tag: 'UI/UX Design',
-      images: [
-        { src: '/project-previews/edulearn-01.webp', alt: 'EduLearn UI preview 1' },
-        { src: '/project-previews/edulearn-02.webp', alt: 'EduLearn UI preview 2' },
-        { src: '/project-previews/edulearn-03.webp', alt: 'EduLearn UI preview 3' },
-        { src: '/project-previews/edulearn-04.webp', alt: 'EduLearn UI preview 4' },
-        { src: '/project-previews/edulearn-05.webp', alt: 'EduLearn UI preview 5' },
-        { src: '/project-previews/edulearn-06.webp', alt: 'EduLearn UI preview 6' },
-        { src: '/project-previews/edulearn-07.webp', alt: 'EduLearn UI preview 7' },
-        { src: '/project-previews/edulearn-08.webp', alt: 'EduLearn UI preview 8' },
-      ],
-      tech: ['UI/UX', 'Web'],
-      description:
-        'Clean UI for managing assignments, notes, and academic resources; recognized as Best Performer – UI MasterLine 2025.',
-      links: {
-        github: 'https://github.com/shivanand-vn/Edulearn-UI',
-      },
-      highlights: [
-        'Assignment & notes management',
-        'Academic resource sharing',
-        'Clean and intuitive UI',
-        'Best Performer – UI MasterLine 2025',
-      ],
-    },
-    {
       title: 'Vehicle Dent Detection using Deep Learning',
       tag: 'AI & Computer Vision',
       images: [
@@ -160,6 +134,33 @@ export const portfolio = {
         'Advanced pharma-style reporting system with Excel (.xlsx) & PDF (.pdf) generation',
         'Professional reporting engine generating structured reports with clean layouts, totals, and summaries',
       ],
+    },
+    {
+      title: 'UI MasterLine 2025 – Student & Teacher Management UI',
+      tag: 'UI/UX Design',
+      images: [
+        { src: '/project-previews/edulearn-01.webp', alt: 'EduLearn UI preview 1' },
+        { src: '/project-previews/edulearn-02.webp', alt: 'EduLearn UI preview 2' },
+        { src: '/project-previews/edulearn-03.webp', alt: 'EduLearn UI preview 3' },
+        { src: '/project-previews/edulearn-04.webp', alt: 'EduLearn UI preview 4' },
+        { src: '/project-previews/edulearn-05.webp', alt: 'EduLearn UI preview 5' },
+        { src: '/project-previews/edulearn-06.webp', alt: 'EduLearn UI preview 6' },
+        { src: '/project-previews/edulearn-07.webp', alt: 'EduLearn UI preview 7' },
+        { src: '/project-previews/edulearn-08.webp', alt: 'EduLearn UI preview 8' },
+      ],
+      tech: ['UI/UX', 'Web'],
+      description:
+        'Clean UI for managing assignments, notes, and academic resources; recognized as Best Performer – UI MasterLine 2025.',
+      links: {
+        github: 'https://github.com/shivanand-vn/Edulearn-UI',
+      },
+      highlights: [
+        'Assignment & notes management',
+        'Academic resource sharing',
+        'Clean and intuitive UI',
+        'Best Performer – UI MasterLine 2025',
+      ],
+      appreciationBadge: '🏆 Best Performer – UI MasterLine 2025',
     },
     {
       title: 'AI & IoT Based Smart Waste Management System',
