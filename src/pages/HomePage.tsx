@@ -6,6 +6,7 @@ import { useTheme } from '../hooks/useTheme'
 import HeroSection from '../sections/HeroSection'
 import LogoMarquee from '../components/LogoMarquee'
 import AboutSection from '../sections/AboutSection'
+import StatsBanner from '../components/StatsBanner'
 
 // Lazy loaded below-the-fold sections
 const SkillsSection = lazy(() => import('../sections/SkillsSection'))
@@ -54,6 +55,8 @@ export default function HomePage() {
         <Suspense fallback={<SectionFallback />}>
           <SkillsSection />
         </Suspense>
+
+        <StatsBanner />
         
         <Suspense fallback={<SectionFallback />}>
           <ProjectsSection />
