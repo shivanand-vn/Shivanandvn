@@ -6,7 +6,7 @@ import { scrollToId } from '../lib/scroll'
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="section-shell">
+    <section id="projects" className="section-shell !pt-6 sm:!pt-8">
       <div className="container-shell">
         <SectionHeading
           eyebrow="Projects"

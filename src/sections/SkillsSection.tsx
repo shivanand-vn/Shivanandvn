@@ -111,7 +111,7 @@ const groups = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="section-shell relative overflow-hidden">
+    <section id="skills" className="section-shell !pb-6 sm:!pb-8 relative overflow-hidden">
       {/* Background ambient orbs */}
       <div className="absolute left-[5%] top-[40%] -z-10 h-80 w-80 rounded-full bg-purple-500/5 blur-[100px]" />
       
