@@ -19,6 +19,8 @@ import {
   SiVercel,
   SiRender,
   SiCloudflare,
+  SiCloudinary,
+  SiBrevo,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 import SectionHeading from '../components/SectionHeading'
@@ -51,6 +53,8 @@ const skillIcons: Record<string, { icon: IconType; color: string }> = {
   Vercel: { icon: SiVercel, color: '#000000' },
   Render: { icon: SiRender, color: '#46E3B7' },
   'Cloudflare R2': { icon: SiCloudflare, color: '#F38020' },
+  Cloudinary: { icon: SiCloudinary, color: '#3448C5' },
+  Brevo: { icon: SiBrevo, color: '#008060' },
 }
 
 const groups = [

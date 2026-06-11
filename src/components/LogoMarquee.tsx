@@ -14,6 +14,8 @@ import {
   SiVercel,
   SiRender,
   SiCloudflare,
+  SiCloudinary,
+  SiBrevo,
 } from 'react-icons/si'
 
 const items = [
@@ -32,6 +34,8 @@ const items = [
   { name: 'Vercel', icon: SiVercel, color: '#000000' },
   { name: 'Render', icon: SiRender, color: '#46E3B7' },
   { name: 'Cloudflare', icon: SiCloudflare, color: '#F38020' },
+  { name: 'Cloudinary', icon: SiCloudinary, color: '#3448C5' },
+  { name: 'Brevo', icon: SiBrevo, color: '#008060' },
 ]
 
 export default function LogoMarquee() {

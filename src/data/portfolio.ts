@@ -25,7 +25,7 @@ export const portfolio = {
       'OOP',
       'Data Structures',
     ],
-    cloud: ['Vercel', 'Render', 'Cloudflare R2'],
+    cloud: ['Vercel', 'Render', 'Cloudflare R2', 'Cloudinary', 'Brevo'],
   },
   projects: [
     {
