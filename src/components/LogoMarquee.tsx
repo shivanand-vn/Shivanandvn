@@ -38,47 +38,145 @@ const items = [
   { name: 'Brevo', icon: SiBrevo, color: '#008060' },
 ]
 
+// Seeded/pre-shuffled configurations to prevent hydration mismatches
+const row1Items = [
+  items[3], // TypeScript
+  items[0], // Python
+  items[14], // Cloudflare
+  items[4], // React
+  items[9], // MySQL
+  items[8], // Express
+  items[5], // HTML5
+  items[10], // MongoDB
+  items[15], // Cloudinary
+  items[1], // C
+  items[6], // Tailwind CSS
+  items[11], // Firebase
+  items[7], // Node.js
+  items[2], // JavaScript
+  items[12], // Vercel
+  items[13], // Render
+  items[16], // Brevo
+]
+
+const row2Items = [
+  items[4], // React
+  items[10], // MongoDB
+  items[1], // C
+  items[12], // Vercel
+  items[2], // JavaScript
+  items[14], // Cloudflare
+  items[0], // Python
+  items[8], // Express
+  items[3], // TypeScript
+  items[16], // Brevo
+  items[13], // Render
+  items[9], // MySQL
+  items[5], // HTML5
+  items[6], // Tailwind CSS
+  items[15], // Cloudinary
+  items[7], // Node.js
+  items[11], // Firebase
+]
+
+const row3Items = [
+  items[6], // Tailwind CSS
+  items[7], // Node.js
+  items[11], // Firebase
+  items[15], // Cloudinary
+  items[13], // Render
+  items[16], // Brevo
+  items[5], // HTML5
+  items[9], // MySQL
+  items[8], // Express
+  items[0], // Python
+  items[2], // JavaScript
+  items[1], // C
+  items[3], // TypeScript
+  items[4], // React
+  items[10], // MongoDB
+  items[14], // Cloudflare
+  items[12], // Vercel
+]
+
 export default function LogoMarquee() {
   return (
-    <div className="relative w-full overflow-hidden py-2">
+    <div className="relative w-full overflow-hidden py-4 flex flex-col gap-4">
       {/* Edge gradient masks for beautiful fade-out effect */}
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-50 to-transparent dark:from-zinc-950 pointer-events-none z-10" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 to-transparent dark:from-zinc-950 pointer-events-none z-10" />
 
-      {/* Scrolling container */}
-      <div className="flex w-max items-center animate-marquee hover:[animation-play-state:paused] cursor-pointer">
-        {/* First marquee list */}
+      {/* Row 1: Left to Right */}
+      <div className="flex w-max items-center animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '38s' }}>
         <div className="flex items-center gap-16 pr-16">
-          {items.map((item, idx) => {
+          {row1Items.map((item, idx) => {
             const Icon = item.icon
             return (
-              <div
-                key={`first-${idx}`}
-                className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors"
-              >
-                <Icon
-                  className="h-8 w-8 transition-transform duration-300 hover:scale-110"
-                  style={{ color: item.color }}
-                />
+              <div key={`r1-1-${idx}`} className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+                <Icon className="h-8 w-8 transition-transform duration-300 hover:scale-110" style={{ color: item.color }} />
                 <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">{item.name}</span>
               </div>
             )
           })}
         </div>
-
-        {/* Second identical marquee list for seamless loop */}
         <div className="flex items-center gap-16 pr-16">
-          {items.map((item, idx) => {
+          {row1Items.map((item, idx) => {
             const Icon = item.icon
             return (
-              <div
-                key={`second-${idx}`}
-                className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors"
-              >
-                <Icon
-                  className="h-8 w-8 transition-transform duration-300 hover:scale-110"
-                  style={{ color: item.color }}
-                />
+              <div key={`r1-2-${idx}`} className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+                <Icon className="h-8 w-8 transition-transform duration-300 hover:scale-110" style={{ color: item.color }} />
+                <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">{item.name}</span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Row 2: Right to Left */}
+      <div className="flex w-max items-center animate-marquee hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '34s' }}>
+        <div className="flex items-center gap-16 pr-16">
+          {row2Items.map((item, idx) => {
+            const Icon = item.icon
+            return (
+              <div key={`r2-1-${idx}`} className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+                <Icon className="h-8 w-8 transition-transform duration-300 hover:scale-110" style={{ color: item.color }} />
+                <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">{item.name}</span>
+              </div>
+            )
+          })}
+        </div>
+        <div className="flex items-center gap-16 pr-16">
+          {row2Items.map((item, idx) => {
+            const Icon = item.icon
+            return (
+              <div key={`r2-2-${idx}`} className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+                <Icon className="h-8 w-8 transition-transform duration-300 hover:scale-110" style={{ color: item.color }} />
+                <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">{item.name}</span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Row 3: Left to Right */}
+      <div className="flex w-max items-center animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer" style={{ animationDuration: '42s' }}>
+        <div className="flex items-center gap-16 pr-16">
+          {row3Items.map((item, idx) => {
+            const Icon = item.icon
+            return (
+              <div key={`r3-1-${idx}`} className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+                <Icon className="h-8 w-8 transition-transform duration-300 hover:scale-110" style={{ color: item.color }} />
+                <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">{item.name}</span>
+              </div>
+            )
+          })}
+        </div>
+        <div className="flex items-center gap-16 pr-16">
+          {row3Items.map((item, idx) => {
+            const Icon = item.icon
+            return (
+              <div key={`r3-2-${idx}`} className="flex items-center gap-3.5 select-none text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+                <Icon className="h-8 w-8 transition-transform duration-300 hover:scale-110" style={{ color: item.color }} />
                 <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">{item.name}</span>
               </div>
             )
