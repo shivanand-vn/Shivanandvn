@@ -8,8 +8,8 @@ export const portfolio = {
     github: 'https://github.com/shivanand-vn',
   },
   about: [
-    'MCA student with hands-on experience in Python, full stack web development, and desktop application development.',
-    'Skilled in building real-world applications using Tkinter, MySQL, React, Node.js, Express, MongoDB, and modern web technologies. Seeking a software development role to apply technical skills and grow professionally.',
+    'An MCA student and developer specializing in full-stack web applications, automated workflow scripts, and desktop tools.',
+    'I build software that solves real-world business bottlenecks—like automating logistics trip sheets to reduce manual entry by 80%, or creating multi-tier inventory systems for pharmaceutical distributors. I focus on clean, efficient code that delivers measurable results.',
   ],
   skills: {
     languages: ['Python', 'C', 'JavaScript'],

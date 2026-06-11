@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiBookOpen, FiCode, FiCpu, FiShield } from 'react-icons/fi'
+import { FiBookOpen, FiCode, FiCpu, FiShield, FiSettings, FiLayers } from 'react-icons/fi'
 import SectionHeading from '../components/SectionHeading'
 import { portfolio } from '../data/portfolio'
 
@@ -30,6 +30,21 @@ export default function AboutSection() {
       desc: 'Analyzing legacy workflows and coding custom automations to eliminate friction and human errors.',
       icon: FiShield,
       colorClass: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
+    },
+  ]
+
+  const philosophy = [
+    {
+      title: 'Automate Everything',
+      desc: 'Eliminating repetitive manual tasks and human error using robust script automations.',
+      icon: FiSettings,
+      colorClass: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20',
+    },
+    {
+      title: 'Clean Architecture',
+      desc: 'Building highly maintainable, scalable, and readable codebases that stand the test of time.',
+      icon: FiLayers,
+      colorClass: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
     },
   ]
 
@@ -74,9 +89,35 @@ export default function AboutSection() {
               {rest.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
-              <p>
-                Whether it is building multi-tier web platforms for pharmaceutical operations or programming automated shipping dashboards, I enjoy resolving immediate constraints with clean engineering.
-              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="pt-6 border-t border-zinc-200/50 dark:border-zinc-800/50 pl-7 space-y-4"
+            >
+              <h4 className="text-xs font-semibold tracking-wider text-zinc-400 dark:text-zinc-500 uppercase">
+                Engineering Philosophy
+              </h4>
+              <div className="space-y-4">
+                {philosophy.map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className={`mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-lg border ${item.colorClass}`}>
+                      <item.icon className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <h5 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
+                        {item.title}
+                      </h5>
+                      <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
 
