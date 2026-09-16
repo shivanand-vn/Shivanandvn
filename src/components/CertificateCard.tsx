@@ -8,6 +8,7 @@ type Props = {
   image: string
   description: string
   badge?: string
+  imageClassName?: string
   onClick: () => void
 }
 
@@ -18,6 +19,7 @@ export default function CertificateCard({
   image,
   description,
   badge,
+  imageClassName,
   onClick,
 }: Props) {
   return (
@@ -34,7 +36,7 @@ export default function CertificateCard({
           alt={title}
           loading="lazy"
           decoding="async"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-103"
+          className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-103 ${imageClassName || 'object-center'}`}
         />
         {/* Soft dark vignette on image hover */}
         <div className="absolute inset-0 bg-black/10 dark:bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

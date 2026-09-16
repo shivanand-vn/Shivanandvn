@@ -241,6 +241,16 @@ export const portfolio = {
   ],
   certifications: [
     {
+      title: 'Metvy Charter – Data Science & Full Stack Development',
+      issuer: 'Metvy',
+      year: '2026',
+      image: '/certificates/metvy-charter.webp',
+      badge: 'Charter Member',
+      imageClassName: 'object-[center_20%]',
+      description:
+        'Charter certification (Membership No. DS/17) graduating from the Data Science Development Program, recognized for proficiency in programming, web development, and software engineering to build scalable web applications.',
+    },
+    {
       title: 'Microsoft Azure Course Completion',
       issuer: 'Microsoft Learn & FICE',
       year: '2026',

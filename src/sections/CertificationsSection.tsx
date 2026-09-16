@@ -41,6 +41,7 @@ export default function CertificationsSection() {
                   image={app.image}
                   description={app.description}
                   badge={app.badge}
+                  imageClassName="object-top"
                   onClick={() => setSelectedCert(app)}
                 />
               </motion.div>
@@ -67,6 +68,8 @@ export default function CertificationsSection() {
                   year={cert.year}
                   image={cert.image}
                   description={cert.description}
+                  badge={'badge' in cert ? cert.badge : undefined}
+                  imageClassName={'imageClassName' in cert ? cert.imageClassName : undefined}
                   onClick={() => setSelectedCert(cert)}
                 />
               </motion.div>
