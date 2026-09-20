@@ -78,7 +78,7 @@ export default function CertificateModal({ isOpen, onClose, certificate }: Props
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 px-5 py-2 text-xs font-bold text-white transition-colors"
                 >
-                  {certificate.badge ? 'View Letter' : 'View Full Certificate'}
+                  {certificate.badge === 'Client Appreciation' ? 'View Letter' : 'View Full Certificate'}
                   <FiExternalLink className="h-3.5 w-3.5" />
                 </a>
               </div>
