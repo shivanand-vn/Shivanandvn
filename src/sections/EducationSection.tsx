@@ -19,7 +19,7 @@ function parseYearRange(title: string) {
 }
 
 const educationDetails = [
-  { location: 'Hubli / Dharwad', scoreBadge: null as string | null },
+  { location: 'Hubli / Dharwad', scoreBadge: 'CGPA: 7.9' },
   { location: 'Hubli / Dharwad', scoreBadge: 'CGPA: 8.45' },
   { location: 'Hubli / Dharwad', scoreBadge: '81.67%' },
   { location: 'Mudhol', scoreBadge: '82.72%' },

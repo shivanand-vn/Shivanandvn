@@ -203,7 +203,7 @@ export const portfolio = {
     {
       title: 'MCA (2026)',
       org: 'Chetan Business School, Hubli',
-      meta: '',
+      meta: 'CGPA: 7.9',
     },
     {
       title: 'BSc Computer Science (2024)',
