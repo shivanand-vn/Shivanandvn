@@ -8,8 +8,8 @@ export default function AboutSection() {
 
   const roles = [
     {
-      title: 'MCA Student',
-      desc: 'Pursuing Post-Graduation in Computer Applications, blending advanced theory with practical application.',
+      title: 'MCA Scholar & Software Developer',
+      desc: 'Completed Post-Graduation in Computer Applications, blending advanced theory with practical application.',
       icon: FiBookOpen,
       colorClass: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
     },
