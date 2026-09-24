@@ -223,6 +223,15 @@ export const portfolio = {
   ],
   appreciations: [
     {
+      title: 'Certificate of Appreciation – Kerala Mathematics Association',
+      issuer: 'Kerala Mathematics Association',
+      year: '2026',
+      image: '/certificates/kerala-maths-association.webp',
+      badge: 'Official Appreciation',
+      description:
+        'Awarded Certificate of Appreciation for successfully designing, developing, and deploying the official website for the International Journal "Bulletin of Kerala Mathematics Association" during a 130-day internship, encompassing UI/UX design, full-stack development, and journal submission workflows.',
+    },
+    {
       title: 'Client Appreciation – SV Pharma',
       issuer: 'Shree Veerabhadreshwar Pharma',
       year: '2026',
