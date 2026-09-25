@@ -1,6 +1,6 @@
 export const portfolio = {
   name: 'Shivanand Viranna Naganur',
-  role: 'MCA Student | Full Stack & Python Developer',
+  role: 'MCA Scholar & Software Developer | Full Stack & Python Developer',
   phone: '+91 8197682353',
   email: 'shivanandvn.mca@gmail.com',
   links: {
@@ -8,7 +8,7 @@ export const portfolio = {
     github: 'https://github.com/shivanand-vn',
   },
   about: [
-    'An MCA student and developer specializing in full-stack web applications, automated workflow scripts, and desktop tools.',
+    'An MCA Scholar & Software Developer specializing in full-stack web applications, automated workflow scripts, and desktop tools.',
     'I build software that solves real-world business bottlenecks—like automating logistics trip sheets to reduce manual entry by 80%, or creating multi-tier inventory systems for pharmaceutical distributors. I focus on clean, efficient code that delivers measurable results.',
   ],
   skills: {
@@ -201,9 +201,9 @@ export const portfolio = {
   ],
   education: [
     {
-      title: 'MCA (Pursuing)',
+      title: 'MCA (2026)',
       org: 'Chetan Business School, Hubli',
-      meta: '',
+      meta: 'CGPA: 7.9',
     },
     {
       title: 'BSc Computer Science (2024)',
