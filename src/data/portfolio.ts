@@ -1,14 +1,14 @@
 export const portfolio = {
   name: 'Shivanand Viranna Naganur',
-  role: 'MCA Student | Full Stack & Python Developer',
+  role: 'MCA Scholar & Software Developer | Full Stack & Python Developer',
   phone: '+91 8197682353',
   email: 'shivanandvn.mca@gmail.com',
   links: {
-    linkedin: 'https://www.linkedin.com/in/shivanand-naganur-253019316',
+    linkedin: 'https://www.linkedin.com/in/shivanandvn',
     github: 'https://github.com/shivanand-vn',
   },
   about: [
-    'An MCA student and developer specializing in full-stack web applications, automated workflow scripts, and desktop tools.',
+    'An MCA Scholar & Software Developer specializing in full-stack web applications, automated workflow scripts, and desktop tools.',
     'I build software that solves real-world business bottlenecks—like automating logistics trip sheets to reduce manual entry by 80%, or creating multi-tier inventory systems for pharmaceutical distributors. I focus on clean, efficient code that delivers measurable results.',
   ],
   skills: {
@@ -201,9 +201,9 @@ export const portfolio = {
   ],
   education: [
     {
-      title: 'MCA (Pursuing)',
+      title: 'MCA (2026)',
       org: 'Chetan Business School, Hubli',
-      meta: '',
+      meta: 'CGPA: 7.9',
     },
     {
       title: 'BSc Computer Science (2024)',
@@ -241,14 +241,13 @@ export const portfolio = {
   ],
   certifications: [
     {
-      title: 'Metvy Charter – Data Science & Full Stack Development',
-      issuer: 'Metvy',
+      title: 'Metvy Charter – Data Science Development Program',
+      issuer: 'Metvy (CBS Collaboration)',
       year: '2026',
       image: '/certificates/metvy-charter.webp',
-      badge: 'Charter Member',
-      imageClassName: 'object-[center_20%]',
+      imageClassName: 'object-center',
       description:
-        'Charter certification (Membership No. DS/17) graduating from the Data Science Development Program, recognized for proficiency in programming, web development, and software engineering to build scalable web applications.',
+        'Certification for the Data Science Development Program in collaboration with CBS, covering core data science concepts, analytics, programming, and software engineering principles.',
     },
     {
       title: 'Microsoft Azure Course Completion',
@@ -273,7 +272,7 @@ export const portfolio = {
     },
     {
       title: 'Full Stack Web Development',
-      issuer: 'Metvy – Chetan Business School Hubli',
+      issuer: 'Metvy (CBS Collaboration)',
       year: '2024',
       image: '/certificates/fullstack-metvy.webp',
       description: 'Training covering frontend and backend technologies including HTML, CSS, JavaScript, React, Node.js, Express, and backend fundamentals.',

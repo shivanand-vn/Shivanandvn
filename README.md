@@ -1,6 +1,6 @@
 # Shivanand VN - Portfolio
 
-Welcome to my personal portfolio repository! I'm an MCA student and passionate developer focused on building reliable, practical applications with Python, React, and modern web technologies. This repository contains the source code for my interactive portfolio, designed to showcase my projects, skills, education, and professional experience.
+Welcome to my personal portfolio repository! I'm an MCA Scholar & Software Developer focused on building reliable, practical applications with Python, React, and modern web technologies. This repository contains the source code for my interactive portfolio, designed to showcase my projects, skills, education, and professional experience.
 
 🌐 **Live Now:** [https://shivanandvn.vercel.app/](https://shivanandvn.vercel.app/)
 
@@ -26,7 +26,7 @@ This portfolio is built with a focus on high-quality aesthetics, responsiveness,
 ## 📬 Contact
 
 - **Email**: [shivanandvn.mca@gmail.com](mailto:shivanandvn.mca@gmail.com)
-- **LinkedIn**: [Shivanand Naganur](https://www.linkedin.com/in/shivanand-naganur-253019316)
+- **LinkedIn**: [Shivanand Naganur](https://www.linkedin.com/in/shivanandvn)
 - **GitHub**: [@shivanand-vn](https://github.com/shivanand-vn)
 
 Feel free to reach out if you have an opportunity or a project idea!
