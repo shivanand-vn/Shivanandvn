@@ -26,7 +26,7 @@ This portfolio is built with a focus on high-quality aesthetics, responsiveness,
 ## 📬 Contact
 
 - **Email**: [shivanandvn.mca@gmail.com](mailto:shivanandvn.mca@gmail.com)
-- **LinkedIn**: [Shivanand Naganur](https://www.linkedin.com/in/shivanand-naganur-253019316)
+- **LinkedIn**: [Shivanand Naganur](https://www.linkedin.com/in/shivanandvn)
 - **GitHub**: [@shivanand-vn](https://github.com/shivanand-vn)
 
 Feel free to reach out if you have an opportunity or a project idea!

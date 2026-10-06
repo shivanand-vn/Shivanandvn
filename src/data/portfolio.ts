@@ -4,7 +4,7 @@ export const portfolio = {
   phone: '+91 8197682353',
   email: 'shivanandvn.mca@gmail.com',
   links: {
-    linkedin: 'https://www.linkedin.com/in/shivanand-naganur-253019316',
+    linkedin: 'https://www.linkedin.com/in/shivanandvn',
     github: 'https://github.com/shivanand-vn',
   },
   about: [
@@ -241,14 +241,13 @@ export const portfolio = {
   ],
   certifications: [
     {
-      title: 'Metvy Charter – Data Science & Full Stack Development',
-      issuer: 'Metvy',
+      title: 'Metvy Charter – Data Science Development Program',
+      issuer: 'Metvy (CBS Collaboration)',
       year: '2026',
       image: '/certificates/metvy-charter.webp',
-      badge: 'Charter Member',
-      imageClassName: 'object-[center_20%]',
+      imageClassName: 'object-center',
       description:
-        'Charter certification (Membership No. DS/17) graduating from the Data Science Development Program, recognized for proficiency in programming, web development, and software engineering to build scalable web applications.',
+        'Certification for the Data Science Development Program in collaboration with CBS, covering core data science concepts, analytics, programming, and software engineering principles.',
     },
     {
       title: 'Microsoft Azure Course Completion',
@@ -273,7 +272,7 @@ export const portfolio = {
     },
     {
       title: 'Full Stack Web Development',
-      issuer: 'Metvy – Chetan Business School Hubli',
+      issuer: 'Metvy (CBS Collaboration)',
       year: '2024',
       image: '/certificates/fullstack-metvy.webp',
       description: 'Training covering frontend and backend technologies including HTML, CSS, JavaScript, React, Node.js, Express, and backend fundamentals.',

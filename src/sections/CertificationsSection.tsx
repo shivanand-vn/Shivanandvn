@@ -54,26 +54,37 @@ export default function CertificationsSection() {
             Technical Certifications & Hackathons
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {portfolio.certifications.map((cert, index) => (
-              <motion.div
-                key={cert.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-              >
-                <CertificateCard
-                  title={cert.title}
-                  issuer={cert.issuer}
-                  year={cert.year}
-                  image={cert.image}
-                  description={cert.description}
-                  badge={'badge' in cert ? cert.badge : undefined}
-                  imageClassName={'imageClassName' in cert ? cert.imageClassName : undefined}
-                  onClick={() => setSelectedCert(cert)}
-                />
-              </motion.div>
-            ))}
+            {portfolio.certifications.map((cert, index) => {
+              const isLastSingle =
+                index === portfolio.certifications.length - 1 &&
+                portfolio.certifications.length % 3 === 1
+
+              return (
+                <motion.div
+                  key={cert.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className={
+                    isLastSingle
+                      ? 'sm:col-span-2 sm:w-full sm:max-w-[calc(50%-0.75rem)] sm:mx-auto lg:max-w-none lg:col-span-1 lg:col-start-2'
+                      : ''
+                  }
+                >
+                  <CertificateCard
+                    title={cert.title}
+                    issuer={cert.issuer}
+                    year={cert.year}
+                    image={cert.image}
+                    description={cert.description}
+                    badge={'badge' in cert ? (cert as { badge?: string }).badge : undefined}
+                    imageClassName={'imageClassName' in cert ? (cert as { imageClassName?: string }).imageClassName : undefined}
+                    onClick={() => setSelectedCert(cert)}
+                  />
+                </motion.div>
+              )
+            })}
           </div>
         </div>
 
