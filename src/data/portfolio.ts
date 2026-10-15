@@ -44,6 +44,7 @@ export const portfolio = {
       description:
         'Official digital publication platform and management system for the international peer-reviewed journal "Bulletin of Kerala Mathematics Association". Engineered with multi-role access (Author, Reviewer, Reader, Admin), automated manuscript submission pipelines, peer-review management, Call for Papers (CFP) tracking, and a searchable scholarly archive.',
       links: {
+        github: 'https://github.com/shivanand-vn/kma',
         live: 'https://bkma.in/',
       },
       highlights: [
