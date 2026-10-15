@@ -8,7 +8,7 @@ interface StatItem {
 
 const stats: StatItem[] = [
   {
-    value: '5+',
+    value: '6+',
     label: 'Projects Built & Deployed',
     colorClass: 'from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300',
   },
