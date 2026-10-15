@@ -12,6 +12,7 @@ export type Project = {
   links?: { github?: string; live?: string; linkedin?: string }
   images?: readonly { src: string; alt: string }[]
   appreciationBadge?: string
+  appreciationTargetId?: string
   tag?: string
 }
 
@@ -22,6 +23,22 @@ export default function FeaturedProject({
   project: Project
   reverse?: boolean
 }) {
+  const handleAppreciationClick = (targetId: string) => {
+    const element = document.getElementById(targetId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    } else {
+      const certSection = document.getElementById('certifications')
+      certSection?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    try {
+      window.history.pushState(null, '', `#${targetId}`)
+    } catch {
+      // safe fallback
+    }
+    window.dispatchEvent(new CustomEvent('highlight-achievement', { detail: targetId }))
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -68,9 +85,23 @@ export default function FeaturedProject({
             </span>
           ) : null}
           {project.appreciationBadge ? (
-            <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/20 bg-amber-500/5 px-2.5 py-0.5 text-[10px] font-bold text-amber-600 dark:border-amber-400/20 dark:bg-amber-400/10 dark:text-amber-400">
-              {project.appreciationBadge}
-            </span>
+            project.appreciationTargetId ? (
+              <button
+                type="button"
+                onClick={() => handleAppreciationClick(project.appreciationTargetId!)}
+                title="Click to view certificate in Achievements section"
+                className="group inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 px-3 py-1 text-[10px] font-bold text-amber-600 dark:border-amber-400/30 dark:bg-amber-400/15 dark:hover:bg-amber-400/25 dark:text-amber-400 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-amber-500/20 hover:scale-[1.03] active:scale-95"
+              >
+                <span>{project.appreciationBadge}</span>
+                <span className="text-[10px] text-amber-500 dark:text-amber-400 transition-transform duration-200 group-hover:translate-x-0.5 font-bold">
+                  ↗
+                </span>
+              </button>
+            ) : (
+              <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/20 bg-amber-500/5 px-2.5 py-0.5 text-[10px] font-bold text-amber-600 dark:border-amber-400/20 dark:bg-amber-400/10 dark:text-amber-400">
+                {project.appreciationBadge}
+              </span>
+            )
           ) : null}
         </div>
 

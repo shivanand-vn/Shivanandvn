@@ -9,6 +9,7 @@ type Props = {
   description: string
   badge?: string
   imageClassName?: string
+  isHighlighted?: boolean
   onClick: () => void
 }
 
@@ -20,6 +21,7 @@ export default function CertificateCard({
   description,
   badge,
   imageClassName,
+  isHighlighted = false,
   onClick,
 }: Props) {
   return (
@@ -27,7 +29,11 @@ export default function CertificateCard({
       whileHover={{ y: -4, scale: 1.01 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       onClick={onClick}
-      className="glass-card glass-card-hover flex cursor-pointer flex-col overflow-hidden rounded-3xl group"
+      className={`relative glass-card glass-card-hover flex cursor-pointer flex-col overflow-hidden rounded-3xl group transition-all duration-500 ${
+        isHighlighted
+          ? 'ring-4 ring-amber-400 dark:ring-amber-400 shadow-[0_0_40px_rgba(245,158,11,0.55)] dark:shadow-[0_0_50px_rgba(251,191,36,0.65)] scale-[1.02] border-amber-400/60'
+          : ''
+      }`}
     >
       {/* Aspect Ratio Box for Image */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200/50 dark:border-zinc-800/40">

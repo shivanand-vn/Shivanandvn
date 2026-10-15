@@ -16,6 +16,8 @@ import {
   SiCloudflare,
   SiCloudinary,
   SiBrevo,
+  SiPostgresql,
+  SiSupabase,
 } from 'react-icons/si'
 
 const items = [
@@ -36,12 +38,15 @@ const items = [
   { name: 'Cloudflare', icon: SiCloudflare, color: '#F38020' },
   { name: 'Cloudinary', icon: SiCloudinary, color: '#3448C5' },
   { name: 'Brevo', icon: SiBrevo, color: '#008060' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+  { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
 ]
 
 // Seeded/pre-shuffled configurations to prevent hydration mismatches
 const row1Items = [
   items[12], // Vercel
   items[5],  // HTML5
+  items[17], // PostgreSQL
   items[0],  // Python
   items[16], // Brevo
   items[7],  // Node.js
@@ -50,6 +55,7 @@ const row1Items = [
   items[1],  // C
   items[14], // Cloudflare
   items[8],  // Express
+  items[18], // Supabase
   items[3],  // TypeScript
   items[10], // MongoDB
   items[15], // Cloudinary
@@ -62,12 +68,14 @@ const row1Items = [
 const row2Items = [
   items[2],  // JavaScript
   items[14], // Cloudflare
+  items[18], // Supabase
   items[8],  // Express
   items[1],  // C
   items[10], // MongoDB
   items[6],  // Tailwind CSS
   items[15], // Cloudinary
   items[4],  // React
+  items[17], // PostgreSQL
   items[12], // Vercel
   items[0],  // Python
   items[11], // Firebase

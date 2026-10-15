@@ -15,7 +15,7 @@ export const portfolio = {
     languages: ['Python', 'C', 'JavaScript'],
     frontend: ['React', 'TypeScript', 'TailwindCSS', 'HTML'],
     backend: ['Node.js', 'Express'],
-    databases: ['MySQL', 'MongoDB', 'Firebase'],
+    databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'Supabase', 'Firebase'],
     tools: ['GitHub', 'VS Code', 'Postman', 'MySQL Workbench', 'MongoDB Compass'],
     other: [
       'AI/ML',
@@ -28,6 +28,34 @@ export const portfolio = {
     cloud: ['Vercel', 'Render', 'Cloudflare R2', 'Cloudinary', 'Brevo'],
   },
   projects: [
+    {
+      title: 'Bulletin of Kerala Mathematics Association (BKMA)',
+      tag: 'Academic Journal Portal',
+      images: [
+        { src: '/project-previews/bkma-01.webp', alt: 'BKMA landing page and membership benefits overview' },
+        { src: '/project-previews/bkma-02.webp', alt: 'BKMA live website footer with developer credits (Nandeesh MN & Shivanand VN)' },
+        { src: '/project-previews/bkma-05.webp', alt: 'BKMA admin portal system overview and review queue' },
+        { src: '/project-previews/bkma-04.webp', alt: 'BKMA admin published manuscripts and scholarly research archive' },
+        { src: '/project-previews/bkma-03.webp', alt: 'BKMA admin portal profile and account management' },
+        { src: '/project-previews/bkma-06.webp', alt: 'BKMA reader portal dashboard and call for papers' },
+        { src: '/project-previews/bkma-07.webp', alt: 'BKMA author portal dashboard and manuscript submission pipeline' },
+      ],
+      tech: ['React', 'Firebase', 'TailwindCSS', 'Cloudflare', 'Node.js'],
+      description:
+        'Official digital publication platform and management system for the international peer-reviewed journal "Bulletin of Kerala Mathematics Association". Engineered with multi-role access (Author, Reviewer, Reader, Admin), automated manuscript submission pipelines, peer-review management, Call for Papers (CFP) tracking, and a searchable scholarly archive.',
+      links: {
+        live: 'https://bkma.in/',
+      },
+      highlights: [
+        'Multi-role portal architecture with dedicated workflows for Admin, Authors, Reviewers, and Readers',
+        'Automated end-to-end manuscript submission, review tracking, and editorial publication pipeline',
+        'Comprehensive scholarly archive indexing 65+ peer-reviewed mathematical research papers',
+        'Call for Papers management system with active deadline timers and submissions tracking',
+        'Official Client Appreciation received from the Kerala Mathematical Association',
+      ],
+      appreciationBadge: '🏆 Client Appreciation Received',
+      appreciationTargetId: 'appreciation-bkma',
+    },
     {
       title: 'SV Pharma – Pharmacy Management System',
       tag: 'E-commerce',
@@ -59,6 +87,7 @@ export const portfolio = {
         'Email notifications',
       ],
       appreciationBadge: '🏆 Client Appreciation Received',
+      appreciationTargetId: 'appreciation-sv-pharma',
     },
     {
       title: 'Transport Management System',
@@ -87,6 +116,7 @@ export const portfolio = {
         '100% billing accuracy',
       ],
       appreciationBadge: '🏆 Client Appreciation Received',
+      appreciationTargetId: 'appreciation-transport',
     },
     {
       title: 'Vehicle Dent Detection using Deep Learning',
@@ -161,6 +191,7 @@ export const portfolio = {
         'Best Performer – UI MasterLine 2025',
       ],
       appreciationBadge: '🏆 Best Performer – UI MasterLine 2025',
+      appreciationTargetId: 'achievement-ui-masterline',
     },
     {
       title: 'AI & IoT Based Smart Waste Management System',
@@ -223,15 +254,17 @@ export const portfolio = {
   ],
   appreciations: [
     {
+      id: 'appreciation-bkma',
       title: 'Certificate of Appreciation – Kerala Mathematics Association',
       issuer: 'Kerala Mathematics Association',
       year: '2026',
       image: '/certificates/kerala-maths-association.webp',
-      badge: 'Official Appreciation',
+      badge: 'Client Appreciation',
       description:
         'Awarded Certificate of Appreciation for successfully designing, developing, and deploying the official website for the International Journal "Bulletin of Kerala Mathematics Association" during a 130-day internship, encompassing UI/UX design, full-stack development, and journal submission workflows.',
     },
     {
+      id: 'appreciation-sv-pharma',
       title: 'Client Appreciation – SV Pharma',
       issuer: 'Shree Veerabhadreshwar Pharma',
       year: '2026',
@@ -240,6 +273,7 @@ export const portfolio = {
       badge: 'Client Appreciation',
     },
     {
+      id: 'appreciation-transport',
       title: 'Client Appreciation – Transport Management System',
       issuer: 'SGT - Shree Guru Transport',
       year: '2025',
@@ -250,6 +284,7 @@ export const portfolio = {
   ],
   certifications: [
     {
+      id: 'cert-metvy-data-science',
       title: 'Metvy Charter – Data Science Development Program',
       issuer: 'Metvy (CBS Collaboration)',
       year: '2026',
@@ -259,6 +294,7 @@ export const portfolio = {
         'Certification for the Data Science Development Program in collaboration with CBS, covering core data science concepts, analytics, programming, and software engineering principles.',
     },
     {
+      id: 'cert-azure',
       title: 'Microsoft Azure Course Completion',
       issuer: 'Microsoft Learn & FICE',
       year: '2026',
@@ -266,6 +302,7 @@ export const portfolio = {
       description: 'Completed a 25-hour course on Microsoft Azure cloud concepts, services, and architecture, issued by Microsoft Learn in collaboration with FICE.',
     },
     {
+      id: 'cert-react-simplilearn',
       title: 'React.js – Frontend Development',
       issuer: 'Simplilearn',
       year: '2024',
@@ -273,6 +310,7 @@ export const portfolio = {
       description: 'Certification covering React fundamentals, component architecture, hooks, and modern frontend development.',
     },
     {
+      id: 'cert-ai-ml-metvy',
       title: 'AI & ML Certification',
       issuer: 'Metvy (CBS Collaboration)',
       year: '2024',
@@ -280,6 +318,7 @@ export const portfolio = {
       description: 'Covered fundamental concepts of Artificial Intelligence and Machine Learning including data processing and basic model concepts.',
     },
     {
+      id: 'cert-fullstack-metvy',
       title: 'Full Stack Web Development',
       issuer: 'Metvy (CBS Collaboration)',
       year: '2024',
@@ -287,6 +326,7 @@ export const portfolio = {
       description: 'Training covering frontend and backend technologies including HTML, CSS, JavaScript, React, Node.js, Express, and backend fundamentals.',
     },
     {
+      id: 'achievement-ui-masterline',
       title: 'Best Performer – UI MasterLine 2025',
       issuer: 'Chetan Business School, Hubli',
       year: '2025',
@@ -294,6 +334,7 @@ export const portfolio = {
       description: 'Awarded Best Performer for designing an intuitive Student & Teacher Management UI with excellent usability and interface design.',
     },
     {
+      id: 'cert-hackfusion-2025',
       title: 'Hackfusion – 2K25 Hackathon Participation',
       issuer: 'A.G.M Rural College of Engineering and Technology, Hubballi',
       year: '2025',
