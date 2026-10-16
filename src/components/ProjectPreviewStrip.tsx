@@ -85,37 +85,44 @@ export default function ProjectPreviewStrip({ images }: { images: readonly Img[]
       <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-3">
         <button
           type="button"
-          onClick={() => goRelative(-1)}
-          className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/70 text-zinc-900 shadow-sm backdrop-blur opacity-0 transition-opacity hover:bg-white/80 group-hover:opacity-100 dark:border-zinc-700/40 dark:bg-zinc-950/50 dark:text-zinc-100 dark:hover:bg-zinc-950/70"
+          onClick={(e) => {
+            e.stopPropagation()
+            goRelative(-1)
+          }}
+          className="pointer-events-auto inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/80 text-zinc-900 shadow-sm backdrop-blur opacity-0 transition-opacity hover:bg-white group-hover:opacity-100 dark:border-zinc-700/40 dark:bg-zinc-950/60 dark:text-zinc-100 dark:hover:bg-zinc-950/80"
           aria-label="Previous preview"
         >
-          <FiChevronLeft />
+          <FiChevronLeft className="h-4 w-4" />
         </button>
         <button
           type="button"
-          onClick={() => goRelative(1)}
-          className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/70 text-zinc-900 shadow-sm backdrop-blur opacity-0 transition-opacity hover:bg-white/80 group-hover:opacity-100 dark:border-zinc-700/40 dark:bg-zinc-950/50 dark:text-zinc-100 dark:hover:bg-zinc-950/70"
+          onClick={(e) => {
+            e.stopPropagation()
+            goRelative(1)
+          }}
+          className="pointer-events-auto inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/80 text-zinc-900 shadow-sm backdrop-blur opacity-0 transition-opacity hover:bg-white group-hover:opacity-100 dark:border-zinc-700/40 dark:bg-zinc-950/60 dark:text-zinc-100 dark:hover:bg-zinc-950/80"
           aria-label="Next preview"
         >
-          <FiChevronRight />
+          <FiChevronRight className="h-4 w-4" />
         </button>
       </div>
 
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-        <div className="flex items-center gap-2 rounded-full border border-white/30 bg-white/60 px-3 py-2 backdrop-blur dark:border-zinc-700/40 dark:bg-zinc-950/40">
+        <div className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/70 px-2.5 py-1.5 backdrop-blur dark:border-zinc-700/40 dark:bg-zinc-950/50">
           {images.map((_, i) => (
             <button
               key={i}
               type="button"
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation()
                 setIndex(i)
                 setIsUserInteracting(true)
                 window.setTimeout(() => setIsUserInteracting(false), 900)
               }}
               className={[
-                'h-2 w-2 rounded-full transition',
+                'h-1.5 w-1.5 rounded-full transition-all',
                 i === index
-                  ? 'bg-zinc-900 dark:bg-white'
+                  ? 'bg-zinc-900 w-3 dark:bg-white'
                   : 'bg-zinc-400/60 hover:bg-zinc-500/70 dark:bg-zinc-500/50 dark:hover:bg-zinc-400/70',
               ].join(' ')}
               aria-label={`Go to preview ${i + 1}`}
