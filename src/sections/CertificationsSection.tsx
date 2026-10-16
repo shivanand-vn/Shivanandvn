@@ -52,15 +52,18 @@ export default function CertificationsSection() {
         <SectionHeading
           eyebrow="Achievements"
           title="Certifications & Key Milestones"
-          description="Verified technical credentials, client appreciations, and competitive hackathon milestones."
+          description="Verified technical credentials, client appreciations, and competitive hackathon milestones. Click any card to preview full certificates."
         />
 
         <div className="mb-14">
           <h3 className="mb-6 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 border-l-2 border-emerald-500 pl-3">
             Professional Recognition & Client Appreciations
           </h3>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-6 lg:gap-8">
             {portfolio.appreciations.map((app, index) => {
+              const isLastSingle =
+                index === portfolio.appreciations.length - 1 &&
+                portfolio.appreciations.length % 2 === 1
               const isHighlighted = highlightedId === app.id
               return (
                 <motion.div
@@ -70,7 +73,12 @@ export default function CertificationsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="scroll-mt-28"
+                  className={[
+                    'scroll-mt-28 flex flex-col',
+                    isLastSingle
+                      ? 'col-span-2 w-full max-w-[calc(50%-5px)] sm:max-w-[calc(50%-0.5rem)] md:max-w-[calc(50%-0.75rem)] lg:max-w-[calc(50%-1rem)] mx-auto'
+                      : '',
+                  ].join(' ')}
                 >
                   <CertificateCard
                     title={app.title}
@@ -81,6 +89,7 @@ export default function CertificationsSection() {
                     badge={app.badge}
                     imageClassName="object-top"
                     isHighlighted={isHighlighted}
+                    className="h-full"
                     onClick={() => setSelectedCert(app)}
                   />
                 </motion.div>
@@ -93,11 +102,11 @@ export default function CertificationsSection() {
           <h3 className="mb-6 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 border-l-2 border-purple-500 pl-3">
             Technical Certifications & Hackathons
           </h3>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-6 lg:gap-8">
             {portfolio.certifications.map((cert, index) => {
               const isLastSingle =
                 index === portfolio.certifications.length - 1 &&
-                portfolio.certifications.length % 3 === 1
+                portfolio.certifications.length % 2 === 1
               const certId = 'id' in cert ? (cert as { id: string }).id : undefined
               const isHighlighted = certId ? highlightedId === certId : false
 
@@ -110,9 +119,9 @@ export default function CertificationsSection() {
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className={[
-                    'scroll-mt-28',
+                    'scroll-mt-28 flex flex-col',
                     isLastSingle
-                      ? 'sm:col-span-2 sm:w-full sm:max-w-[calc(50%-0.75rem)] sm:mx-auto lg:max-w-none lg:col-span-1 lg:col-start-2'
+                      ? 'col-span-2 w-full max-w-[calc(50%-5px)] sm:max-w-[calc(50%-0.5rem)] md:max-w-[calc(50%-0.75rem)] lg:max-w-[calc(50%-1rem)] mx-auto'
                       : '',
                   ].join(' ')}
                 >
@@ -125,6 +134,7 @@ export default function CertificationsSection() {
                     badge={'badge' in cert ? (cert as { badge?: string }).badge : undefined}
                     imageClassName={'imageClassName' in cert ? (cert as { imageClassName?: string }).imageClassName : undefined}
                     isHighlighted={isHighlighted}
+                    className="h-full"
                     onClick={() => setSelectedCert(cert)}
                   />
                 </motion.div>
@@ -142,4 +152,3 @@ export default function CertificationsSection() {
     </section>
   )
 }
-
