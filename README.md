@@ -6,7 +6,7 @@ Welcome to my personal portfolio repository! I'm an MCA Scholar & Software Devel
 
 ## ✨ Key Features
 
-This portfolio is built with a focus on high-quality aesthetics, responsiveness, and clean interactive elements:
+This portfolio is built with a focus on responsiveness, and clean interactive elements:
 
 - **Immersive Animated Background**: Custom `framer-motion` ambient glowing orbs (adjusting seamlessly between deep and vibrant pastel palettes for Light/Dark themes) over an architectural tech-grid overlay with cinematic vignetting.
 - **Dynamic 2x2 Education Timeline**: A custom-built flowing U-shape pathway connecting education nodes chronologically using glowing CSS tracks and pulsing synchronised markers.
