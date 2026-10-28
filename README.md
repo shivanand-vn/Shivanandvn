@@ -9,7 +9,6 @@ Welcome to my personal portfolio repository! I'm an MCA Scholar & Software Devel
 This portfolio is built with a focus on responsiveness, and clean interactive elements:
 
 - **Immersive Animated Background**: Custom `framer-motion` ambient glowing orbs (adjusting seamlessly between deep and vibrant pastel palettes for Light/Dark themes) over an architectural tech-grid overlay with cinematic vignetting.
-- **Dynamic 2x2 Education Timeline**: A custom-built flowing U-shape pathway connecting education nodes chronologically using glowing CSS tracks and pulsing synchronised markers.
 - **Modern Project & Certificate Viewers**: High quality, glassmorphic project cards and certificate grids featuring client appreciation badges and interactive modal popups.
 - **Sleek Minimalist Typography & Layout**: Carefully weighted typography, subtle frosted glass containers, smooth hover interactions, and an uncluttered footer to provide a premium user experience.
 - **Intelligent Theme Toggling**: Full system-aware CSS variables allowing instantaneous switching between a moody, deep-space Dark Mode and an airy, vibrant Light Mode.
