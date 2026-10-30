@@ -10,7 +10,6 @@ This portfolio is built with a focus on responsiveness, and clean interactive el
 
 - **Immersive Animated Background**: Custom `framer-motion` ambient glowing orbs (adjusting seamlessly between deep and vibrant pastel palettes for Light/Dark themes) over an architectural tech-grid overlay with cinematic vignetting.
 - **Modern Project & Certificate Viewers**: High quality, glassmorphic project cards and certificate grids featuring client appreciation badges and interactive modal popups.
-- **Sleek Minimalist Typography & Layout**: Carefully weighted typography, subtle frosted glass containers, smooth hover interactions, and an uncluttered footer to provide a premium user experience.
 
 ## 🛠️ Tech Stack
 
