@@ -12,9 +12,9 @@ export const portfolio = {
     'I build software that solves real-world business bottlenecks—like automating logistics trip sheets to reduce manual entry by 80%, or creating multi-tier inventory systems for pharmaceutical distributors. I focus on clean, efficient code that delivers measurable results.',
   ],
   skills: {
-    languages: ['Python', 'C', 'JavaScript'],
-    frontend: ['React', 'TypeScript', 'TailwindCSS', 'HTML'],
-    backend: ['Node.js', 'Express'],
+    languages: ['Python', 'TypeScript', 'C', 'JavaScript'],
+    frontend: ['React', 'Vue', 'TypeScript', 'TailwindCSS', 'HTML'],
+    backend: ['Python(Flask)', 'Node.js', 'Express'],
     databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'Supabase', 'Firebase'],
     tools: ['GitHub', 'VS Code', 'Postman', 'MySQL Workbench', 'MongoDB Compass'],
     other: [
