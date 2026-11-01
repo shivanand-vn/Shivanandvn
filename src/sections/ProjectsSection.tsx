@@ -23,7 +23,7 @@ export default function ProjectsSection() {
           }
         />
 
-        <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {portfolio.projects.map((p, idx) => {
             const isLastSingle =
               idx === portfolio.projects.length - 1 &&
@@ -36,7 +36,7 @@ export default function ProjectsSection() {
                 onOpenDetails={() => setSelectedProject(p)}
                 className={
                   isLastSingle
-                    ? 'col-span-2 w-full max-w-[calc(50%-5px)] sm:max-w-[calc(50%-0.5rem)] md:max-w-[calc(50%-0.75rem)] lg:max-w-[calc(50%-1rem)] mx-auto'
+                    ? 'md:col-span-2 md:w-full md:max-w-[calc(50%-0.75rem)] lg:max-w-[calc(50%-1rem)] md:mx-auto'
                     : ''
                 }
               />
