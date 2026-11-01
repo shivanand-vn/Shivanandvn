@@ -18,6 +18,8 @@ import {
   SiBrevo,
   SiPostgresql,
   SiSupabase,
+  SiVuedotjs,
+  SiFlask,
 } from 'react-icons/si'
 
 const items = [
@@ -40,6 +42,8 @@ const items = [
   { name: 'Brevo', icon: SiBrevo, color: '#008060' },
   { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
   { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
+  { name: 'Vue.js', icon: SiVuedotjs, color: '#4FC08D' },
+  { name: 'Flask', icon: SiFlask, color: '#000000' },
 ]
 
 // Seeded/pre-shuffled configurations to prevent hydration mismatches
@@ -63,6 +67,8 @@ const row1Items = [
   items[9],  // MySQL
   items[13], // Render
   items[6],  // Tailwind CSS
+  items[19], // Vue.js
+  items[20], // Flask
 ]
 
 const row2Items = [
@@ -73,6 +79,8 @@ const row2Items = [
   items[1],  // C
   items[10], // MongoDB
   items[6],  // Tailwind CSS
+  items[19], // Vue.js
+  items[20], // Flask
   items[15], // Cloudinary
   items[4],  // React
   items[17], // PostgreSQL
