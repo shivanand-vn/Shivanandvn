@@ -24,6 +24,8 @@ import {
   SiFirebase,
   SiPostgresql,
   SiSupabase,
+  SiVuedotjs,
+  SiFlask,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 import SectionHeading from '../components/SectionHeading'
@@ -37,9 +39,14 @@ const skillIcons: Record<string, { icon: IconType; color: string }> = {
   HTML: { icon: SiHtml5, color: '#E34F26' },
   CSS: { icon: SiCss, color: '#1572B6' },
   React: { icon: SiReact, color: '#61DAFB' },
+  Vue: { icon: SiVuedotjs, color: '#4FC08D' },
+  'Vue.js': { icon: SiVuedotjs, color: '#4FC08D' },
   TailwindCSS: { icon: SiTailwindcss, color: '#06B6D4' },
   'Node.js': { icon: SiNodedotjs, color: '#339933' },
   Express: { icon: SiExpress, color: '#000000' }, // Monochrome
+  'Python(Flask)': { icon: SiFlask, color: '#000000' },
+  'Python (Flask)': { icon: SiFlask, color: '#000000' },
+  Flask: { icon: SiFlask, color: '#000000' },
   MySQL: { icon: SiMysql, color: '#4479A1' },
   PostgreSQL: { icon: SiPostgresql, color: '#4169E1' },
   MongoDB: { icon: SiMongodb, color: '#47A248' },
