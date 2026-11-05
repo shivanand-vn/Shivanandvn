@@ -28,4 +28,4 @@ Feel free to reach out if you have an opportunity or a project idea!
 
 ---
 
-*“Building Web Applications, Backend APIs, Data Science Solutions & Cloud-Based Systems”*
+*“Building Web Applications, Data Science Solutions & Cloud-Based Systems”*
