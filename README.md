@@ -14,7 +14,7 @@ This portfolio is built with a focus on responsiveness, and clean interactive el
 - **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/) (Fi / Si)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 
 
 ## 📬 Contact
