@@ -12,7 +12,6 @@ This portfolio is built with a focus on responsiveness, and clean interactive el
 ## 🛠️ Tech Stack
 
 - **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 
 ## 📬 Contact
 
