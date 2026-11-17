@@ -8,11 +8,6 @@ Welcome to my personal portfolio repository! I'm an MCA Scholar & Software Devel
 
 This portfolio is built with a focus on responsiveness, and clean interactive elements:
 
-
-## 🛠️ Tech Stack
-
-- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
-
 ## 📬 Contact
 
 - **Email**: [shivanandvn.mca@gmail.com](mailto:shivanandvn.mca@gmail.com)
