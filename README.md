@@ -4,10 +4,6 @@ Welcome to my personal portfolio repository! I'm an MCA Scholar & Software Devel
 
 🌐 **Live Now:** [https://shivanandvn.vercel.app/](https://shivanandvn.vercel.app/)
 
-## ✨ Key Features
-
-This portfolio is built with a focus on responsiveness, and clean interactive elements:
-
 ## 📬 Contact
 
 - **Email**: [shivanandvn.mca@gmail.com](mailto:shivanandvn.mca@gmail.com)
