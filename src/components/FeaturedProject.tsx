@@ -60,52 +60,55 @@ export default function FeaturedProject({ project, onOpenDetails, className }: P
           </div>
         )}
 
-        {/* Top Left Status / Category Badge Overlay */}
-        <div className="pointer-events-none absolute top-2 left-2 sm:top-2.5 sm:left-3 z-10 flex items-center gap-1 sm:gap-1.5 rounded-full bg-zinc-950/85 backdrop-blur-md border border-emerald-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[8px] sm:text-[9.5px] font-bold tracking-tight text-emerald-400 shadow-lg">
-          <span className="relative flex h-1 w-1 sm:h-1.5 sm:w-1.5 flex-shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-1 w-1 sm:h-1.5 sm:w-1.5 bg-emerald-500" />
-          </span>
-          <span className="truncate max-w-[90px] sm:max-w-none">
-            {project.links?.live ? 'Live Demo' : project.tag || 'Project'}
-          </span>
-        </div>
-
-        {/* Top Right Client Appreciation Badge Overlay */}
-        {project.appreciationBadge ? (
-          <button
-            type="button"
-            onClick={(e) => {
-              if (project.appreciationTargetId) {
-                handleAppreciationClick(e, project.appreciationTargetId)
-              } else {
-                e.stopPropagation()
-                onOpenDetails()
-              }
-            }}
-            title="Click to view related appreciation in Achievements"
-            className="absolute top-2 right-2 sm:top-2.5 sm:right-3 z-10 flex items-center gap-1 rounded-full bg-amber-500/25 backdrop-blur-md border border-amber-500/40 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[8px] sm:text-[9.5px] font-bold text-amber-300 shadow-lg hover:bg-amber-500/35 hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
-          >
-            <span className="text-[8px] sm:text-[9.5px]">🏆</span>
-            <span>
-              {project.appreciationBadge.includes('Client Appreciation') ? (
-                'Client Appreciation'
-              ) : project.appreciationBadge.includes('Best Performer') ? (
-                <>
-                  <span>Best Performer</span>
-                  <span className="hidden md:inline"> – UI MasterLine</span>
-                </>
-              ) : project.appreciationBadge.includes('INCOMEX') ? (
-                <>
-                  <span>INCOMEX 2026</span>
-                  <span className="hidden md:inline"> & CHE’TECH</span>
-                </>
-              ) : (
-                project.appreciationBadge.replace('🏆', '').trim()
-              )}
+        {/* Top Badges Overlay Header */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex items-center justify-between gap-1.5 p-1.5 sm:p-2.5">
+          {/* Status / Category Badge */}
+          <div className="pointer-events-auto flex items-center gap-1 sm:gap-1.5 rounded-full bg-zinc-950/85 backdrop-blur-md border border-emerald-500/30 px-1.5 sm:px-2.5 py-0.5 sm:py-1 text-[7.5px] xs:text-[8px] sm:text-[9.5px] font-bold tracking-tight text-emerald-400 shadow-lg min-w-0 max-w-[46%] sm:max-w-none shrink-0">
+            <span className="relative flex h-1 w-1 sm:h-1.5 sm:w-1.5 flex-shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-1 w-1 sm:h-1.5 sm:w-1.5 bg-emerald-500" />
             </span>
-          </button>
-        ) : null}
+            <span className="truncate">
+              {project.links?.live ? 'Live Demo' : project.tag || 'Project'}
+            </span>
+          </div>
+
+          {/* Top Right Client Appreciation / Award Badge */}
+          {project.appreciationBadge ? (
+            <button
+              type="button"
+              onClick={(e) => {
+                if (project.appreciationTargetId) {
+                  handleAppreciationClick(e, project.appreciationTargetId)
+                } else {
+                  e.stopPropagation()
+                  onOpenDetails()
+                }
+              }}
+              title="Click to view related appreciation in Achievements"
+              className="pointer-events-auto flex items-center gap-1 rounded-full bg-amber-500/25 backdrop-blur-md border border-amber-500/40 px-1.5 sm:px-2.5 py-0.5 sm:py-1 text-[7.5px] xs:text-[8px] sm:text-[9.5px] font-bold text-amber-300 shadow-lg hover:bg-amber-500/35 hover:scale-105 active:scale-95 transition-all whitespace-nowrap min-w-0 shrink-0 ml-auto"
+            >
+              <span className="text-[7.5px] xs:text-[8px] sm:text-[9.5px] flex-shrink-0">🏆</span>
+              <span className="truncate">
+                {project.appreciationBadge.includes('Client Appreciation') ? (
+                  'Client Appreciation'
+                ) : project.appreciationBadge.includes('Best Performer') ? (
+                  <>
+                    <span>Best Performer</span>
+                    <span className="hidden md:inline"> – UI MasterLine</span>
+                  </>
+                ) : project.appreciationBadge.includes('INCOMEX') ? (
+                  <>
+                    <span>INCOMEX 2026</span>
+                    <span className="hidden md:inline"> & CHE’TECH</span>
+                  </>
+                ) : (
+                  project.appreciationBadge.replace('🏆', '').trim()
+                )}
+              </span>
+            </button>
+          ) : null}
+        </div>
       </div>
 
       {/* Card Information Body */}
