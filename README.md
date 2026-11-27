@@ -13,7 +13,7 @@
 
 **Modern, performant, responsive developer portfolio engineered with React 19, TypeScript, Vite, Tailwind CSS, and Framer Motion.**
 
-[🌐 Explore Live Application](https://shivanandvn.vercel.app/) • [📬 Get In Touch](https://shivanandvn.vercel.app/#contact) • [📄 View Resume](https://shivanandvn.vercel.app/)
+[🌐 Explore Live Application](https://shivanandvn.vercel.app/) • [📬 Get In Touch](https://shivanandvn.vercel.app/#contact) • 
 
 </div>
 
